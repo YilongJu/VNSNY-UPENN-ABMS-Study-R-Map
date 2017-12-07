@@ -1,0 +1,12 @@
+name: R_plot_by_neighborhood_ShinyApp
+title:
+username:
+account: yilongju
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 220289
+bundleId: 1121445
+url: https://yilongju.shinyapps.io/R_plot_by_neighborhood_ShinyApp/
+when: 1512665987.37887
+asMultiple: FALSE
+asStatic: FALSE
