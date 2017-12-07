@@ -746,7 +746,8 @@ server <- function(input, output, session) {
     
     # Generate Leaflet map layers
     proxy <- proxy %>%
-      # clearShapes() %>%
+      clearGroup(group = precinct_groupName) %>%
+      clearGroup(group = "tileLayer") %>%
       # Add tile layer
       addPolygons(
         fillColor = pal(varValues),
@@ -768,21 +769,9 @@ server <- function(input, output, session) {
           textsize = "15px",
           direction = "auto"),
         # popup = tileVar,
-        group = paste0("T_", varShortNames[tileVarIdx])
-      ) %>%
-      clearControls() %>%
-      # Add corresponding legend
-      addLegend(
-        pal = pal,
-        values = varValues,
-        opacity = 0.7,
-        title = varShortNames[tileVarIdx],
-        position = "bottomright",
-        group = paste0("T_", varShortNames[tileVarIdx])
-      )
-    
-    # Add precinct layer
-    proxy <- proxy %>%
+        group = "tileLayer"
+      ) %>% 
+      # Add precinct layer
       addPolygons(
         data = nypp_attr,
         fillColor = precinct_pal(precinct_varValues),
@@ -805,6 +794,16 @@ server <- function(input, output, session) {
           direction = "auto"),
         # popup = tileVar,
         group = precinct_groupName
+      ) %>%
+      clearControls() %>%
+      # Add corresponding legend
+      addLegend(
+        pal = pal,
+        values = varValues,
+        opacity = 0.7,
+        title = varShortNames[tileVarIdx],
+        position = "bottomright",
+        group = paste0("T_", varShortNames[tileVarIdx])
       ) %>%
       addLegend(
         colors = colors,
