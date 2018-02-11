@@ -918,7 +918,6 @@ server <- function(input, output, session) {
     cat("------------ 2 ------------")
     # Generate Leaflet map layers
     proxy <- proxy %>%
-      clearGroup(group = precinct_groupName) %>%
       clearGroup(group = "tileLayer") %>%
       # Add tile layer
       addPolygons(
@@ -943,30 +942,6 @@ server <- function(input, output, session) {
         # popup = tileVar,
         group = "tileLayer"
       ) %>% 
-      # Add precinct layer
-      addPolygons(
-        data = nypp_attr,
-        fillColor = precinct_pal(precinct_varValues),
-        weight = 1,
-        opacity = 1,
-        color = "red",
-        dashArray = "3",
-        fillOpacity = 0.8,
-        highlight = highlightOptions(
-          weight = 3,
-          color = "red",
-          dashArray = "",
-          fillOpacity = 0.0,
-          bringToFront = F),
-        label = precinct_labels,
-        labelOptions = labelOptions(
-          style = list("font-weight" = "normal",
-                       padding = "3px 8px"),
-          textsize = "15px",
-          direction = "auto"),
-        # popup = tileVar,
-        group = precinct_groupName
-      ) %>%
       clearControls() %>%
       # Add corresponding legend
       addLegend(
@@ -976,15 +951,6 @@ server <- function(input, output, session) {
         title = varShortNames[tileVarIdx],
         position = "bottomright",
         group = paste0("T_", varShortNames[tileVarIdx])
-      ) %>%
-      addLegend(
-        colors = colors,
-        labels = intervalLable,
-        opacity = 0.7,
-        title = "Major offense<br>per capita",
-        position = "bottomright",
-        labFormat = labelFormat(),
-        group = precinct_groupName
       )
       
     cat("------------ 3 ------------")
@@ -993,7 +959,6 @@ server <- function(input, output, session) {
         addLayersControl(
           baseGroups = c("Grey map", "Standard map", "Dark map"),
           overlayGroups = c(uniqueBuildingLabel,
-                            precinct_groupName,
                             varShortNames),
           position = "topleft",
           options = layersControlOptions(autoZIndex = TRUE, collapsed = FALSE)
