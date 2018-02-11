@@ -1,8 +1,9 @@
 # [Load packages] ----
 library(rgdal)
-library(tidyverse)
+library(raster)
+library(data.table)
 library(shiny)
-library(lazyeval)
+# library(lazyeval)
 library(reshape2)
 library(scales)
 library(ggmap)
@@ -12,17 +13,24 @@ library(rgeos)
 library(scales)
 library(RColorBrewer)
 library(rsconnect)
-library(plotly)
 library(crosstalk)
-library(doParallel)
 library(leaflet)
 library(OneR)
 library(Hmisc)
 library(moments)
 library(colorspace)
 library(classInt)
-library(data.table)
+library(dplyr)
+
+
 Sys.setenv(TZ = "US/Eastern")
+# sudo su -   -c "R -e \"install.packages(c('lazyeval', 'reshape2', 'scales', 'ggmap', 'Cairo', 'maptools', 'rgeos', 'scales', 'RColorBrewer', 'rsconnect', 'plotly', 'crosstalk', 'doParallel', 'leaflet', 'OneR', 'Hmisc', 'moments', 'colorspace', 'classInt', 'data.table'), repos='http://cran.rstudio.com/')\""
+# sudo su -   -c "R -e \"install.packages('Cairo', repos='http://cran.rstudio.com/')\""
+# sudo su -   -c "R -e \"install.packages('log4r', repos='http://cran.rstudio.com/')\""
+# libgtk2.0-dev libcairo2-dev xvfb xauth xfonts-base
+
+
+
 # library(rsvg)
 
 # author: "Yilong", "Brooke"
@@ -47,7 +55,16 @@ GetBinforVar <- function(data, varName, nbins = 6) {
   bins <- signif(bins, 3)
   return(bins)
 }
-GetRadius <- function(varValue, l = 2, u = 32) {
+GetRadius <- function(varValue, l = 2, u = 32, cap = Inf) {
+  if (cap != Inf) {
+    cat(varValue, '\n\n') 
+    cat(max(varValue, na.rm = T), '\n\n')
+    cat(varValue[which(varValue >= cap)], '\n\n') 
+    varValue[which(varValue >= cap)] <- max(varValue[which(varValue < cap)],
+                                            na.rm = T)
+    cat(varValue, '\n\n') 
+    cat(max(varValue, na.rm = T), '\n\n')
+  }
   range <- range(varValue, na.rm = TRUE)
   varValue <- (varValue - range[1])/(range[2] - range[1]) * (u - l) + l
   return(varValue)
@@ -95,19 +112,24 @@ GetIcon <- function(iconFilename, width = NULL, height = NULL, iconFileLoc = "da
     iconHeight = height))
 }
 # [Read data] ----
-# setwd("/Users/yilongju/Dropbox/Study/GitHub/R_plot_by_neighborhood_ShinyApp")
+# setwd("/Users/yilongju/Dropbox/Study/GitHub/VNSNY-UPENN-ABMS-Study-R-Map")
 
 data <- read.csv("data/ABM_censustract_precinct_111617.csv")
 names(data)[2] <- "BoroCT2000"
 data <- data[order(data$BoroCT2000),]
 data <- data[-1973, ]
-data_precinct <- data %>% select(precpop:offpcap)
-data_precinct2 <- data %>% select(BoroCT2000, precpop:offpcap)
+data_precinct <- data %>% dplyr::select(precpop:offpcap)
+data_precinct2 <- data %>% dplyr::select(BoroCT2000, precpop:offpcap)
+
 varDef <- read.csv("data/Variable_Definitions.csv")
-ct2000shp <- readOGR("data/nyct2000_12c/nyct2000_12c/nyct2000.shp")
+
+ct2000shp <- shapefile("data/nyct2000_12c/nyct2000_12c/nyct2000")
 boros <- readOGR("data/nybb_16a/nybb.shp")
-ny.map <- readOGR("data/ZillowNeighborhoods-NY/ZillowNeighborhoods-NY.shp", layer="ZillowNeighborhoods-NY")
+ny.map <- readOGR("data/ZillowNeighborhoods-NY/ZillowNeighborhoods-NY.shp")
 nypp <- readOGR("data/nypp_17c_police_precinct_shapefile/nypp.shp")
+
+NPIData <- read.csv("NPI_ctuniq.csv", row.names = 1)
+
 # pluto2007_ctuniq <- fread("data/pluto2007_ctuniq.csv")
 
 # [Preprocessing of PLUTO data] ----
@@ -128,11 +150,60 @@ BOI <- c("I1", "I3", "I5", "I6", "I7", "K1", "K2", "K3", "K4", "K5", "K6", "P5",
 pluto_bldCT <- fread("data/pluto_bldCT.csv")
 #   Give id to each row
 pluto_bldCT$id <- rownames(pluto_bldCT)
+pluto_bldCT %>% arrange(ctuniq, bldgclass)
 head(pluto_bldCT, 20)
+
+pluto_bldCT_summary <- pluto_bldCT %>%
+  group_by(ctuniq, bldgclass) %>%
+  summarise(count = n())
+
+# [Create building varnames] ----
+buildingVarnames <- list(
+  I1 = "HOSPITAL",
+  I3 = "PHARMACY",
+  I5 = "CLINIC",
+  I6 = "NURSINGHOME",
+  I7 = "ADULTFACILITY",
+  K1 = "ONESTORYSTORE",
+  K2 = "TWOSTORYSTORE",
+  K3 = "DEPTSTORE",
+  K4 = "STOREW_APTMNT",
+  K5 = "DINERS",
+  K6 = "SHOPPINGCNTR",
+  K = "STORES",
+  P5 = "CMTYCNTR",
+  P8 = "LIBRARY",
+  M1 = "CHURCHSYN"
+)
+
+# [Create PLUTO data columns for ABM data] ----
+head(pluto_bldCT_summary)
+pluto_bldCT_summary %>% arrange(ctuniq)
+bldCount <- data.frame(acast(pluto_bldCT_summary, ctuniq ~ bldgclass))
+bldCount[is.na(bldCount)] <- 0
+
+bldCount$K <- bldCount$K1 + bldCount$K2 + bldCount$K3 + bldCount$K4 + bldCount$K5 + bldCount$K6
+colnames(bldCount) <- unlist(buildingVarnames[colnames(bldCount)], use.names = F)
+bldCount$ctuniq <- rownames(bldCount)
+rownames(bldCount) <- 1:nrow(bldCount)
+head(bldCount)
+
+head(data)
+
+ABM_PLUTO <- full_join(data, bldCount, by = "ctuniq")
+head(ABM_PLUTO, 20)
+dim(data)
+dim(bldCount)
+dim(ABM_PLUTO)
+
+write.csv(ABM_PLUTO, "ABM_PLUTO.csv")
+
+
+
 pluto_bldCT[200:210, ]
 pluto_bldCT[is.na(pluto_bldCT$xcoord), ]
 #   Project coordinates of buildings into ny.map coordinate system
-pluto_bldCT_coords <- pluto_bldCT %>% select(id, xcoord, ycoord)
+pluto_bldCT_coords <- pluto_bldCT %>% dplyr::select(id, xcoord, ycoord)
 pluto_bldCT_coords <- pluto_bldCT_coords[complete.cases(pluto_bldCT_coords), ]
 head(pluto_bldCT_coords, 20)
 dim(pluto_bldCT_coords)
@@ -144,7 +215,7 @@ pluto_bldCT_coords <- data.frame(id = pluto_bldCT_coords$id,
                                  x = pluto_bldCT_coords@coords[, 1],
                                  y = pluto_bldCT_coords@coords[, 2])
 head(pluto_bldCT_coords)
-pluto_bldCT <- left_join(pluto_bldCT, pluto_bldCT_coords, by = "id") %>% select(-xcoord, -ycoord)
+pluto_bldCT <- left_join(pluto_bldCT, pluto_bldCT_coords, by = "id") %>% dplyr::select(-xcoord, -ycoord)
 head(pluto_bldCT, 20)
 
 #   Project coordinates of other shape data
@@ -216,8 +287,13 @@ watershedPoints <- fortify(dataProjected, region = "id")
 watershedDF <- merge(watershedPoints, dataProjected@data, by = "id")
 
 # [Prepare useful data] ----
-data_ids <- data %>% select(BoroCT2000, Name)
-data_vars <- data %>% select(popdens:propnonw)
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# ==== Add new variable into CT layer:
+#       1) Add variable description in "Varialbe_Definitions.csv"
+#       2) Add a correspoding column to "data_vars", whose name should be   consistent with the varName in "Varialbe_Definitions.csv"
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+data_ids <- data %>% dplyr::select(BoroCT2000, Name)
+data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap)
 data_coords <- data[, c("ctrdlong", "ctrdlat")]
 data_necessary <- cbind(data_ids, data_vars, data_coords)
 # --- For CT
@@ -229,12 +305,13 @@ uCT$BoroCT2000 <- as.character(uCT$BoroCT2000)
 dfCT <- dplyr::left_join(ct2000shp_DF, uCT, by = "BoroCT2000")
 #   --- Find center of view
 center_ct.map <- ct2000shp_DF %>%
-  select(long, lat) %>%
+  dplyr::select(long, lat) %>%
   summarise(ctrlong = mean(long), ctrlat = mean(lat))
 center_ct.map # -73.91271 40.69984
 #   --- Combine shapefile with data
 ct2000shp_attr <- ct2000shp
 ct2000shp_attr@data <- dplyr::left_join(ct2000shp_attr@data, uCT, by = "BoroCT2000")
+head(ct2000shp_attr@data)
 
 # --- For NB
 uNB <- data_necessary %>%
@@ -243,7 +320,7 @@ uNB <- data_necessary %>%
 dfNB <- dplyr::left_join(watershedDF, uNB, by = "Name")
 #   --- Find center of view
 center_ny.map <- watershedDF %>%
-  select(long, lat) %>%
+  dplyr::select(long, lat) %>%
   summarise(ctrlong = mean(long), ctrlat = mean(lat))
 center_ny.map # -73.92194 40.68922
 #   --- Combine shapefile with data
@@ -287,7 +364,7 @@ dfPP <- dplyr::left_join(nypp_DF, uPP, by = c("Precinct" = "precinct"))
 nypp_attr <- nypp
 nypp_attr@data <- dplyr::left_join(nypp_attr@data, uPP, by = c("Precinct" = "precinct"))
 
-CTname <- dfCT %>% select(BoroCT2000, NTANAme)
+CTname <- dfCT %>% dplyr::select(BoroCT2000, NTANAme)
 data_precinct2$BoroCT2000 <- as.character(data_precinct2$BoroCT2000)
 CTname$BoroCT2000 <- as.character(CTname$BoroCT2000)
 Precinct_CTntaname <- full_join(data_precinct2, CTname, by = "BoroCT2000")
@@ -325,7 +402,7 @@ precinct_pal <- GetColorPalByBins(precinct_varValues, intervals, "red")
 precinct_groupName <- "Percapita offense"
 boro_groupName <- "Boros"
 
-#   For PLUTO data
+# --- For PLUTO data
 greenLeafIcon <- makeIcon(
   iconUrl = "http://leafletjs.com/examples/custom-icons/leaf-green.png",
   iconWidth = 38, iconHeight = 95,
@@ -380,6 +457,32 @@ uniqueBuildingLabel <- uniqueBuildingLabel %>% distinct(buildingLabel)
 uniqueBuildingLabel <- as.character(uniqueBuildingLabel[, 1])
 
 pluto_bldCT_tmp <- pluto_bldCT %>% filter(bldgclass == "I3")
+
+# --- For NPI data
+head(NPIData)
+NPI_majorOrganization <- NPIData %>% 
+  group_by(organization_name.legal_business_name.) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+NPI_majorOrganization <- NPI_majorOrganization[-1, ]
+colnames(NPI_majorOrganization) <- c("organization", "count")
+head(NPI_majorOrganization, 20)
+dim(NPI_majorOrganization)
+organization_fullName <- NPI_majorOrganization$organization
+organization_fullName_20 <- NPI_majorOrganization$organization[1:20]
+organization_abbr <- c(
+  "NYU",
+  "Montefiore",
+  "MSSM",
+  "Weill Cornell"
+)
+organizationLabels <- list(
+  
+)
+NPI_tmp <- pluto_bldCT %>% filter(bldgclass == "I3")
+
+
+
 # [Test leaflet] ----
 if (0) {
   map <- leaflet(ny.map_attr) %>% 
@@ -447,13 +550,78 @@ if (0) {
                  lng = ~x, lat = ~y,
                  # icon = greenLeafIcon
                  icon = buildingIcons[buildingSymbol],
-                 group = unlist(buildingLabels[buildingSymbol], use.names = FALSE)) %>%
+                 group = unlist(buildingLabels[buildingSymbol], use.names = FALSE)
+                 ) %>%
       hideGroup(unlist(buildingLabels[buildingSymbol], use.names = FALSE))
   }
   map <- map %>%
     addLayersControl(
       baseGroups = c("Grey map", "Standard map", "Dark map"),
       overlayGroups = uniqueBuildingLabel,
+      position = "topleft",
+      options = layersControlOptions(autoZIndex = TRUE, collapsed = FALSE))
+  
+  map
+  map <- leaflet(ny.map_attr) %>% 
+    setView(-73.91271, 40.69984, 11) %>%
+    addProviderTiles(providers$Esri.WorldGrayCanvas, group = "Grey map") %>%
+    addProviderTiles(providers$OpenStreetMap.Mapnik, group = "Standard map") %>%
+    addProviderTiles(providers$CartoDB.DarkMatter, group = "Dark map") %>%
+    # addPolygons(weight = 4, color = "red") %>%
+    # addPolygons(data = ct2000shp_attr, weight = 4, color = "blue") %>%
+    # [Add polygons] ----
+  addPolygons(
+    data = boros_attr,
+    fillColor = "white",
+    weight = 4,
+    opacity = 1,
+    color = "black",
+    dashArray = "3",
+    fillOpacity = 0.3,
+    highlight = highlightOptions(
+      weight = 3,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.3,
+      bringToFront = F),
+    group = boro_groupName) %>%
+    addPolygons(
+      data = nypp_attr,
+      fillColor = precinct_pal(precinct_varValues),
+      weight = 1,
+      opacity = 1,
+      color = "red",
+      dashArray = "3",
+      fillOpacity = 0.3,
+      highlight = highlightOptions(
+        weight = 3,
+        color = "#666",
+        dashArray = "",
+        fillOpacity = 0.3,
+        bringToFront = F),
+      label = precinct_labels,
+      labelOptions = labelOptions(
+        style = list("font-weight" = "normal",
+                     padding = "3px 8px"),
+        textsize = "15px",
+        direction = "auto"),
+      # popup = tileVar,
+      group = precinct_groupName
+    ) %>%
+    addLegend(
+      colors = colors,
+      labels = intervalLable,
+      opacity = 0.7,
+      title = "offpcap",
+      position = "bottomright",
+      labFormat = labelFormat(),
+      group = precinct_groupName
+    ) %>%
+    
+  # [Add markers] ----
+  map <- map %>%
+    addLayersControl(
+      baseGroups = c("Grey map", "Standard map", "Dark map"),
       position = "topleft",
       options = layersControlOptions(autoZIndex = TRUE, collapsed = FALSE))
   
@@ -530,7 +698,7 @@ ui <- navbarPage(title = "VNSNY/UPENN ABMS Study",
   )
 )
 
-
+cat("==================")
 # [Define server logic] ----
 server <- function(input, output, session) {
   
@@ -621,15 +789,7 @@ server <- function(input, output, session) {
       baseGroups = c("Grey map", "Standard map", "Dark map"),
       position = "topleft",
       options = layersControlOptions(autoZIndex = TRUE, collapsed = FALSE)
-    ) %>%
-      addPolygons(
-        data = boros_attr,
-        weight = 7,
-        opacity = 1,
-        color = "black",
-        dashArray = "",
-        fillOpacity = 0,
-        group = boro_groupName)
+    )
     
     # Add boro layer
     Lmap <- Lmap %>%
@@ -650,10 +810,15 @@ server <- function(input, output, session) {
         addMarkers(data = pluto_bldCT_tmp,
                    lng = ~x, lat = ~y,
                    icon = buildingIcons[buildingSymbol],
+                   clusterOptions = markerClusterOptions(
+                     disableClusteringAtZoom = 14,
+                     PlacementStrategies = "original-locations"
+                   ),
                    group = unlist(buildingLabels[buildingSymbol], use.names = FALSE)) %>%
         hideGroup(unlist(buildingLabels[buildingSymbol], use.names = FALSE))
     }
 
+    cat("------------ 1 ------------")
     labelVars <- varNames
     # Add all other variables to be shown as circles
     if (length(labelVars) > 0) {
@@ -662,12 +827,19 @@ server <- function(input, output, session) {
         labelVarIdx <- checkboxGroupListIndex[[labelVar]]
         pal2 <- colorBin(varColors[labelVarIdx], domain = mapData[, labelVar], bins = 6)
         groupName <- varShortNames[labelVarIdx]
-
+        
+        if (labelVar == "offpcap") {
+          currentWeights <- GetRadius(mapData[, labelVar],
+                                      radiusRange[1], radiusRange[2], 0.7278)
+        } else {
+          currentWeights <- GetRadius(mapData[, labelVar],
+                                      radiusRange[1], radiusRange[2])
+        }
+        
         Lmap <- Lmap %>%
           addCircles(
             lng = ~ctrdlong, lat = ~ctrdlat,
-            weight = GetRadius(mapData[, labelVar],
-                               radiusRange[1], radiusRange[2]),
+            weight = currentWeights,
             fill = FALSE,
             color = varColors[labelVarIdx],
             stroke = T, fillOpacity = 0.6, opacity = 0.6,
@@ -687,7 +859,7 @@ server <- function(input, output, session) {
     }
     Lmap
   })
-  
+  cat("------------ 1.5 ------------")
   # Observe command from map control, hide / show layers
   observe({
     # Initialize map components
@@ -731,7 +903,7 @@ server <- function(input, output, session) {
     if (CTNames) {
       labels <- paste0(labels, "<strong>CTs:</strong><br/>", mapData$NTANAme)
     }
-    
+    cat("------------ 1.6 ------------")
     labels <- lapply(labels, HTML)
     colfunc <- colorRampPalette(c("white", varColors[tileVarIdx]))
     
@@ -743,7 +915,7 @@ server <- function(input, output, session) {
     
     # Create a proxy for Leaflet map, saving render time
     proxy <- leafletProxy("outputMap", data = map)
-    
+    cat("------------ 2 ------------")
     # Generate Leaflet map layers
     proxy <- proxy %>%
       clearGroup(group = precinct_groupName) %>%
@@ -815,6 +987,7 @@ server <- function(input, output, session) {
         group = precinct_groupName
       )
       
+    cat("------------ 3 ------------")
       # Add map control
       proxy <- proxy %>%
         addLayersControl(
