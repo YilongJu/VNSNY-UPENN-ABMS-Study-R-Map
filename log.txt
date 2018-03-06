@@ -1,0 +1,1501 @@
+2018-02-22T13:41:03.984873+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.985106+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.985106+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.985340+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.985582+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.985583+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.985818+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.985819+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.985341+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.986058+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.986037+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.986278+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.986279+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.986514+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.986745+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.986746+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.986983+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.986516+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.986984+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.987206+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.987205+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.987431+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.987432+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.987676+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.987899+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.987900+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.987676+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.988149+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.988149+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.988372+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.988384+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.988606+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.988607+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.988863+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.988864+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.989099+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.989100+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.989328+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.989330+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.989799+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.989559+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.989558+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.990020+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.989799+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.990021+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.990273+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.990275+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.990490+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.990492+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.990946+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.990716+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.990715+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.990947+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.991176+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.991177+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.991416+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.991417+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.991662+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.991663+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.991889+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.991891+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.992117+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.992119+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.992342+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.992343+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.992575+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.992576+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.992823+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.992824+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.993053+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.993284+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.993052+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.993285+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.993518+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.995138+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.993519+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.993750+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.993751+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.993979+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.993979+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.994213+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.994214+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.994442+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.994443+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.994672+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.994673+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.994907+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.994908+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.995139+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.995372+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.995373+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.995604+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.995603+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.995836+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.995837+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.996073+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.996074+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.996308+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.996308+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.996531+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.996532+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.996786+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.997024+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.996787+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.997260+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.997261+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.997025+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.997494+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.997493+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.997723+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.997724+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.997953+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.997952+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.998187+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.998187+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.998415+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.998414+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.998646+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.998646+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.998880+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.998881+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.999110+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.999111+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.999344+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.999345+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.999572+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.999572+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:03.999800+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:03.999801+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.000028+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.000029+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.000260+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.000259+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.000490+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.000491+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.000759+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.000760+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.000992+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.000993+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.001223+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.001224+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.001460+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.001461+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.001690+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.001691+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.001917+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.001918+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.002147+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.002148+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.002378+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.002381+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.002613+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.002612+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.002849+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.002850+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.003082+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.003083+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.003318+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.003318+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.003548+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.003549+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.003779+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.003778+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.004008+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.004009+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.004238+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.004469+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.004239+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.004470+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.004728+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.004729+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.004965+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.005211+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.004964+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.005213+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.005432+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.005433+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.005666+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.005667+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.005912+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.005913+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.006129+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.006130+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.006362+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.006362+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.006607+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.006608+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.006827+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.006828+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.007059+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.007301+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.007060+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.007300+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.007520+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.007521+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.007752+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.007752+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.007983+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.007984+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.008222+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.008222+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.008451+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.008450+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.008704+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.008705+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.008935+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.008935+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.009167+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.009168+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.009403+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.009403+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.009650+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.009651+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.009871+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.009871+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.010103+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.010104+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.010347+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.010568+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.010348+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.010571+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.010805+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.010806+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.011031+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.011050+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.011275+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.011276+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.011495+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.011496+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.011737+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.011738+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.011957+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.011959+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.012185+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.012186+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.012417+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.012416+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.012669+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.012668+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.012893+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.012894+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.013121+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.013122+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.013350+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.013350+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.013581+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.013581+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.013808+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.013809+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.014036+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.014037+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.014264+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.014504+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.014265+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.014504+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.014741+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.014740+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.014974+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.014974+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.015213+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.015214+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.015447+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.015448+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.015682+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.015682+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.015912+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.015913+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.016149+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.016150+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.016382+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.016383+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.016638+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.045086+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.016638+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.045088+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.045319+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.045320+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.045548+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.045549+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.045784+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.045785+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.046020+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.046253+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.046021+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.046254+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.046487+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.046487+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.046716+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.046716+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.046947+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.046948+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.047180+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.047181+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.047414+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.047414+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.047644+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.047644+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.047877+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.047878+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.048107+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.048108+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.048337+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.048337+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.048568+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.048569+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.048827+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.048826+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.049058+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.049059+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.049286+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.049287+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.049517+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.049517+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.049750+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.049751+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.049983+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.049983+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.050213+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.050214+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.050483+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.050483+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.050762+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.050763+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.051036+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.051037+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.051315+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.051314+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.051584+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.051585+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.051860+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.051861+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.052135+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.052410+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.052137+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.052411+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.052705+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.052704+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.052979+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.052980+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.053251+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.053252+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.053533+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.053811+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.054088+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.053810+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.053546+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.054090+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.054362+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.054364+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.054641+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.054642+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.054910+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.054911+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.055189+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.055191+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.055457+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.055455+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.055732+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.055733+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.056004+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.056005+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.056285+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.056555+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.056286+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.056556+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.057962+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.056857+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.058230+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.057124+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.058508+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.057126+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.056858+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.058232+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.057409+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.058775+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.057411+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.058776+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.057681+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.059055+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.057961+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.057683+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.058509+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.059328+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.059601+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.059869+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.059870+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.059602+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.059327+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.059056+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.060148+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.060149+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.060417+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.060711+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.060418+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.060722+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.060983+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.060984+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.061259+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.061260+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.061542+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.061544+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.061810+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.062089+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.061812+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.062090+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.062370+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.062369+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.062644+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.062645+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.062913+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.062914+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.063192+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.063463+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.063194+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.063464+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.063746+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.063745+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.064025+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.064028+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.064294+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.064296+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.064564+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.064565+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.064856+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.064857+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.065130+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.065131+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.065407+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.065408+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.065677+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.065678+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.065955+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.066230+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.065956+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.066231+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.066504+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.066505+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.066775+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.066776+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.067074+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.067076+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.067363+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.067658+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.067364+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.067659+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.067947+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.067946+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.068247+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.068248+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.068540+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.068541+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.068870+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.069147+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.068871+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.069149+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.069443+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.069442+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.069735+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.069736+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.070027+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.070028+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.070324+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.070625+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.070325+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.070626+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.070920+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.070921+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.071223+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.071222+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.071520+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.071521+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.071828+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.071830+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.072120+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.072122+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.072412+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.072413+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.072719+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.072721+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.073021+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.073022+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.073315+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.073320+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.073616+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.073617+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.073905+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.073904+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.074201+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.074202+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.074495+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.074496+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.074789+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.074790+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.075084+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.075085+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.075378+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.075379+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.075679+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.075680+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.075965+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.075966+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.076256+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.076257+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.076557+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.076555+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.076864+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.076863+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.077171+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.077172+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.077438+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.077440+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.077734+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.077735+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.078033+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.078329+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.078624+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.078625+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.078034+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.078327+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.078923+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.078924+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.079215+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.079509+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.079216+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.079510+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.079800+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.079801+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.080097+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.080098+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.080381+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.080382+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.080692+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.080997+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.080693+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.080998+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.081305+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.081303+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.081591+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.081592+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.081900+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.081900+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.082189+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.082477+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.082190+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.082478+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.082769+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.082773+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.083066+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.083068+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.083353+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.083356+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.083654+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.083655+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.083946+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.083947+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.084243+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.084242+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.084537+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.084852+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.084538+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.084853+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.085148+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.085149+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.085464+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.085465+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.085742+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.085741+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.086030+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.086031+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.086329+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.086330+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.086624+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.086920+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.086625+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.086921+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.087215+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.087216+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.087511+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.087528+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.087808+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.087809+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.088096+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.088097+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.088383+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.088384+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.088695+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.088696+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.088988+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.089004+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.089288+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.089289+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.089584+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.089883+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.089585+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.089899+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.090188+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.090189+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.090481+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.090482+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.090784+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.090785+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.091097+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.091391+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.091098+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.091392+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.091684+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.091685+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.091982+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.091983+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.092282+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.092283+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.092584+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.092585+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.092894+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.092897+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.093197+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.093193+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.093490+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.093491+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.093792+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.093793+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.094096+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.094386+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.094110+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.094387+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.094675+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.094966+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.094969+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.094674+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.095270+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.095271+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.095571+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.095874+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.095574+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.095877+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.096169+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.096170+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.096466+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.096467+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.096792+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.096793+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.097091+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.097094+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.097394+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.097395+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.097689+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.097972+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.097688+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.097976+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.098264+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.098265+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.098576+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.098577+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.098849+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.098851+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.099150+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.099151+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.099454+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.099455+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.099748+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.099748+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.100059+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.100060+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.100355+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.100356+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.100653+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.100654+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.100962+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.100963+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.101263+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.101264+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.101567+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.101568+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.101864+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.101865+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.102160+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.102161+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.102468+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.102469+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.102785+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.102786+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.103079+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.103080+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.103384+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.103385+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.103694+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.103695+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.103991+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.103992+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.104305+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.104306+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.104601+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.104602+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.104933+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.104934+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.105226+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.105227+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.105524+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.105525+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.105821+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.105828+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.106122+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.106123+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.106416+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.106419+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.106720+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.106722+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.107023+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.107024+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.107318+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.107319+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.107629+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.107630+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.107916+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.107917+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.108219+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.108220+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.108524+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.108526+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.108836+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.108838+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.109141+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.109143+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.109427+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.109428+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.109723+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.111813+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.109724+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.110023+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.110023+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.110308+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.110309+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.110615+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.110616+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.110916+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.110917+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.111218+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.111219+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.111513+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.111514+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.111814+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.112116+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.112115+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.112411+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.112717+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.113014+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.113016+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.113311+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.113311+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.112412+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.112718+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.113606+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.113606+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.113894+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.113895+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.114192+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.114192+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.114486+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.114489+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.114791+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.114791+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.115086+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.115087+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.115387+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.115390+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.115685+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.115688+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.115987+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.115988+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.116282+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.116285+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.116589+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.116592+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.116919+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.116919+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.117209+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.117210+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.117497+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.117498+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.117795+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.117798+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.118100+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.118101+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.118392+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.118394+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.118694+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.118695+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.118981+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.118982+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.119288+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.119289+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.119580+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.119581+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.119880+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.119881+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.120197+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.120198+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.120483+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.120484+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.144826+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.144828+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.145099+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.145100+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.145362+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.145363+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.145626+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.145626+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.145884+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.145884+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.146141+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.146141+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.146393+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.146394+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.146649+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.146650+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.146912+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.146913+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.147174+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.147175+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.147432+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.147433+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.147684+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.147685+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.147939+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.147940+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.148197+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.148199+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.148444+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.148445+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.148725+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.148726+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.148981+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.148982+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.149238+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.149239+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.149493+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.149494+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.149743+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.149744+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.149993+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.149994+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.150252+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.150254+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.150507+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.150509+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.150747+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.150749+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.151004+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.151005+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.151256+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.151257+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.151515+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.151516+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.151765+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.151766+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.152017+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.152018+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.152272+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.152273+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.152531+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.152532+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.152806+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.152807+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.153064+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.153065+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.153322+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.153322+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.153577+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.153578+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.153824+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.153825+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.154080+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.154081+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.154344+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.154345+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.154600+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.154601+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.154856+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.154857+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.155107+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.155108+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.155364+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.155365+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.155627+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.155628+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.155877+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.155878+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.156131+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.156132+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.156383+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.156384+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.156648+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.156649+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.156904+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.156905+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.157160+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.157161+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.157406+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.157407+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.157652+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.157653+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.157898+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.157899+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.158152+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.158153+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.158400+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.158401+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.158655+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.158656+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.158910+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.158911+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.159164+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.159165+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.159414+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.159415+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.159668+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.159669+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.159919+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.159921+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.160161+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.160162+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.160415+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.160416+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.160687+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.160688+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.160926+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.160927+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.161180+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.161181+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.161437+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.161437+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.161689+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.161690+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.161938+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.161939+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.162192+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.162193+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.162451+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.162452+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.162704+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.162705+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.162965+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.162966+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.163208+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.163209+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.163466+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.163467+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.163714+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.163715+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.163961+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.163962+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.164211+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.164212+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.164476+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.164477+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.164773+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.164774+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.165021+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.165022+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.165275+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.165276+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.165517+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.165518+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.165759+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.165760+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.166015+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.166272+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.166016+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.166521+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.166765+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.166766+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.166273+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.166522+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.167013+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.167014+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.167270+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.167271+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.167519+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.167520+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.167767+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.167768+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.168023+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.168273+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.168024+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.168274+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.168524+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.168527+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.168780+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.168781+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.169024+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.169025+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.169271+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.169272+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.169518+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.169519+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.169776+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.169776+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.170026+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.170026+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.170283+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.170283+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.170543+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.170544+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.170796+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.170797+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.171041+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.171042+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.171553+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.171554+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.171299+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.171812+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.171300+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.171813+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.172070+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.172071+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.172327+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.172327+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.172585+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.172585+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.172873+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.173137+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.172873+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.173138+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.173392+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.173393+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.173658+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.173659+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.173906+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.173906+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.174157+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.174158+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.174410+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.174411+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.174669+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.174670+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.174926+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.174927+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.175171+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.175172+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.175923+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.175423+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.175424+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.175673+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.175673+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.175924+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.176177+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.176178+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.176427+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.176427+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.176699+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.176700+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.176951+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.176952+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.177206+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.177463+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.177464+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.177206+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.177714+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.177715+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.177965+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.177965+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.178217+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.178217+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.178472+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.178472+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.178722+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.178722+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.178976+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.178977+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.179225+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.179226+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.179475+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.179475+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.179717+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.179718+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.179968+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.180493+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.179969+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:04.180236+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.180492+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:04.180237+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.703656+00:00 shinyapps[268124]: Warning in `[<-.factor`(`*tmp*`, thisvar, value = 0) :
+2018-02-22T13:41:05.720873+00:00 shinyapps[268124]: Warning in mean.default(BoroCT2000) :
+2018-02-22T13:41:05.720874+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.722295+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:05.722329+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.722557+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:05.722558+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.722782+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:05.722784+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.723012+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:05.723013+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.723253+00:00 shinyapps[268124]: Warning in mean.default(Name) :
+2018-02-22T13:41:05.703660+00:00 shinyapps[268124]:   invalid factor level, NA generated
+2018-02-22T13:41:05.723254+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.719892+00:00 shinyapps[268124]: Warning in mean.default(BoroCT2000) :
+2018-02-22T13:41:05.719895+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.720144+00:00 shinyapps[268124]: Warning in mean.default(BoroCT2000) :
+2018-02-22T13:41:05.720147+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.720611+00:00 shinyapps[268124]: Warning in mean.default(BoroCT2000) :
+2018-02-22T13:41:05.720383+00:00 shinyapps[268124]: Warning in mean.default(BoroCT2000) :
+2018-02-22T13:41:05.720385+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:05.720614+00:00 shinyapps[268124]:   argument is not numeric or logical: returning NA
+2018-02-22T13:41:06.306030+00:00 shinyapps[268124]: ==================
+2018-02-22T13:41:06.306034+00:00 shinyapps[268124]: Listening on http://127.0.0.1:45958
+2018-02-22T13:41:09.479872+00:00 shinyapps[268124]: ------------ 1.5 ------------Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.479876+00:00 shinyapps[268124]:   Data contains 3 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.523095+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.523098+00:00 shinyapps[268124]:   Data contains 2 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.529806+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.529807+00:00 shinyapps[268124]:   Data contains 5 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.560870+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.560871+00:00 shinyapps[268124]:   Data contains 3 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.568858+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.568859+00:00 shinyapps[268124]:   Data contains 4 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.577620+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.577621+00:00 shinyapps[268124]:   Data contains 19 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.585650+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.544193+00:00 shinyapps[268124]:   Data contains 96 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.594398+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.552569+00:00 shinyapps[268124]:   Data contains 46 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.602075+00:00 shinyapps[268124]:   Data contains 2 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.552563+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.602050+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.610320+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.610322+00:00 shinyapps[268124]:   Data contains 27 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.585651+00:00 shinyapps[268124]:   Data contains 14 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:09.544191+00:00 shinyapps[268124]: Warning in validateCoords(lng, lat, funcName) :
+2018-02-22T13:41:09.594399+00:00 shinyapps[268124]:   Data contains 2 rows with either missing or invalid lat/lon values and will be ignored
+2018-02-22T13:41:11.047534+00:00 shinyapps[268124]: povrate unemp busdens subdens subacc intdens landind nonres resid ptrans pwalk propoa propnonw offpcap num_er_08 er_charges_08 pcap_er_charges_08 num_er_09 er_charges_09 pcap_er_charges_09 num_er_10 er_charges_10 pcap_er_charges_10 tot_er_pats tot_er_charges pcap_er_charges_tot num_pat_08 charges_08 pcap_hc_charges_08 num_pat_09 charges_09 pcap_hc_charges_09 num_pat_10 charges_10 pcap_hc_charges_10 tot_pats tot_charges pcap_hc_charges_tot num_high_utils_08 num_high_utils_09 num_high_utils_10 
+2018-02-22T13:41:11.047536+00:00 shinyapps[268124]: 
+2018-02-22T13:41:11.050930+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.050915+00:00 shinyapps[268124]: povrate 
+2018-02-22T13:41:11.055716+00:00 shinyapps[268124]: 3 
+2018-02-22T13:41:11.047641+00:00 shinyapps[268124]: Population density Poverty rate Unemployment rate Bus stop density Subway stop density Subway access Intersection density Land use index Tax lots for non-resid use Tax lots for resid use Working resid pub. trans. Working resid pub. walk Resid over 65 Resid nonwhite Crime data # of ER Patients in 2008 Total ER charges in 2008 Pcap ER charges in 2008 # of ER Patients in 2009 Total ER charges in 2009 Pcap ER charges in 2009 # of ER Patients in 2010 Total ER charges in 2010 Pcap ER charges in 2010 Cumulated # of ER partients Cumulated ER charges  Pcap cumulated ER charges  # of HC Patients in 2008 Total HC charges in 2008 Pcap HC charges in 2008 # of HC Patients in 2009 Total HC charges in 2009 Pcap HC charges in 2009 # of HC Patients in 2010 Total HC charges in 2010 Pcap HC charges in 2010 Cumulated # of HC partients Cumulated HC charges  Pcap cumulated HC charges  # of high utilizers (top 20%) in 2008 # of high utilizers (top 20%) in 2009 # of high utilizers (top 20%) in 2010 
+2018-02-22T13:41:11.047734+00:00 shinyapps[268124]: CTLabel BoroCode BoroName CT2000 BoroCT2000 CDEligibil NTACode NTANAme PUMA Shape_Leng Shape_Area id Name popdens povrate unemp busdens subdens subacc intdens landind nonres resid ptrans pwalk propoa propnonw offpcap num_er_08 er_charges_08 pcap_er_charges_08 num_er_09 er_charges_09 pcap_er_charges_09 num_er_10 er_charges_10 pcap_er_charges_10 tot_er_pats tot_er_charges pcap_er_charges_tot num_pat_08 charges_08 pcap_hc_charges_08 num_pat_09 charges_09 pcap_hc_charges_09 num_pat_10 charges_10 pcap_hc_charges_10 tot_pats tot_charges pcap_hc_charges_tot num_high_utils_08 num_high_utils_09 num_high_utils_10 ctrdlong ctrdlat 
+2018-02-22T13:41:11.055708+00:00 shinyapps[268124]: unemp 
+2018-02-22T13:41:11.047478+00:00 shinyapps[268124]: ------------ 1.51 ------------popdens 
+2018-02-22T13:41:11.055717+00:00 shinyapps[268124]: Unemployment rate 
+2018-02-22T13:41:11.050914+00:00 shinyapps[268124]: ------------ 1.55 ------------ 
+2018-02-22T13:41:11.055724+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.050924+00:00 shinyapps[268124]: 2 
+2018-02-22T13:41:11.060952+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.050926+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.060973+00:00 shinyapps[268124]: 4 
+2018-02-22T13:41:11.060954+00:00 shinyapps[268124]: busdens 
+2018-02-22T13:41:11.055717+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.060976+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.050925+00:00 shinyapps[268124]: Poverty rate 
+2018-02-22T13:41:11.061047+00:00 shinyapps[268124]: Bus stop density 
+2018-02-22T13:41:11.055707+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.060975+00:00 shinyapps[268124]: Bus stop density 
+2018-02-22T13:41:11.060988+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.061038+00:00 shinyapps[268124]: 45.8541 
+2018-02-22T13:41:11.061048+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.066518+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.066518+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.066519+00:00 shinyapps[268124]: subdens 
+2018-02-22T13:41:11.066527+00:00 shinyapps[268124]: 5 
+2018-02-22T13:41:11.066528+00:00 shinyapps[268124]: Subway stop density 
+2018-02-22T13:41:11.066536+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.066590+00:00 shinyapps[268124]: 0 
+2018-02-22T13:41:11.066531+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.066597+00:00 shinyapps[268124]: Subway stop density 
+2018-02-22T13:41:11.071474+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.066598+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.071475+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.071483+00:00 shinyapps[268124]: subacc 
+2018-02-22T13:41:11.071483+00:00 shinyapps[268124]: 6 
+2018-02-22T13:41:11.071486+00:00 shinyapps[268124]: Subway access 
+2018-02-22T13:41:11.071524+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.071525+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.071556+00:00 shinyapps[268124]: 0 
+2018-02-22T13:41:11.071563+00:00 shinyapps[268124]: Subway access 
+2018-02-22T13:41:11.071566+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.076241+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.076242+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.076250+00:00 shinyapps[268124]: intdens 
+2018-02-22T13:41:11.076250+00:00 shinyapps[268124]: 7 
+2018-02-22T13:41:11.076251+00:00 shinyapps[268124]: Intersection density 
+2018-02-22T13:41:11.076254+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.076263+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.076319+00:00 shinyapps[268124]: Intersection density 
+2018-02-22T13:41:11.076312+00:00 shinyapps[268124]: 68.78115 
+2018-02-22T13:41:11.076319+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.082600+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.082600+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.082608+00:00 shinyapps[268124]: landind 
+2018-02-22T13:41:11.082609+00:00 shinyapps[268124]: 8 
+2018-02-22T13:41:11.082612+00:00 shinyapps[268124]: Land use index 
+2018-02-22T13:41:11.082615+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.082635+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.082678+00:00 shinyapps[268124]: 0.8097257 
+2018-02-22T13:41:11.082685+00:00 shinyapps[268124]: Land use index 
+2018-02-22T13:41:11.082686+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.088706+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.088705+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.088716+00:00 shinyapps[268124]: nonres 
+2018-02-22T13:41:11.088717+00:00 shinyapps[268124]: Tax lots for non-resid use 
+2018-02-22T13:41:11.088716+00:00 shinyapps[268124]: 9 
+2018-02-22T13:41:11.088720+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.088725+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.095088+00:00 shinyapps[268124]: resid 
+2018-02-22T13:41:11.095079+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.095088+00:00 shinyapps[268124]: 10 
+2018-02-22T13:41:11.095101+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.095092+00:00 shinyapps[268124]: Tax lots for resid use 
+2018-02-22T13:41:11.095113+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.101709+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.101711+00:00 shinyapps[268124]: ptrans 
+2018-02-22T13:41:11.101711+00:00 shinyapps[268124]: 11 
+2018-02-22T13:41:11.101721+00:00 shinyapps[268124]: Working resid pub. trans. 
+2018-02-22T13:41:11.101722+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.101723+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.108122+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.108123+00:00 shinyapps[268124]: pwalk 
+2018-02-22T13:41:11.108131+00:00 shinyapps[268124]: 12 
+2018-02-22T13:41:11.108132+00:00 shinyapps[268124]: Working resid pub. walk 
+2018-02-22T13:41:11.108133+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.108140+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.114414+00:00 shinyapps[268124]: propoa 
+2018-02-22T13:41:11.114413+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.114422+00:00 shinyapps[268124]: Resid over 65 
+2018-02-22T13:41:11.114421+00:00 shinyapps[268124]: 13 
+2018-02-22T13:41:11.114453+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.114451+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.120901+00:00 shinyapps[268124]: propnonw 
+2018-02-22T13:41:11.120899+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.120909+00:00 shinyapps[268124]: 14 
+2018-02-22T13:41:11.120909+00:00 shinyapps[268124]: Resid nonwhite 
+2018-02-22T13:41:11.120910+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.120913+00:00 shinyapps[268124]: ------------ 1.55b ------------ 
+2018-02-22T13:41:11.127815+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.127816+00:00 shinyapps[268124]: offpcap 
+2018-02-22T13:41:11.127824+00:00 shinyapps[268124]: 15 
+2018-02-22T13:41:11.127824+00:00 shinyapps[268124]: Crime data 
+2018-02-22T13:41:11.127827+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.127832+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.127889+00:00 shinyapps[268124]: 0.02933548 
+2018-02-22T13:41:11.127899+00:00 shinyapps[268124]: Crime data 
+2018-02-22T13:41:11.127900+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.134463+00:00 shinyapps[268124]: num_er_08 
+2018-02-22T13:41:11.134454+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.134464+00:00 shinyapps[268124]: 16 
+2018-02-22T13:41:11.134455+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.134475+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.134484+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.134467+00:00 shinyapps[268124]: # of ER Patients in 2008 
+2018-02-22T13:41:11.134532+00:00 shinyapps[268124]: 133 
+2018-02-22T13:41:11.134541+00:00 shinyapps[268124]: # of ER Patients in 2008 
+2018-02-22T13:41:11.134542+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.141058+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.141059+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.141068+00:00 shinyapps[268124]: er_charges_08 
+2018-02-22T13:41:11.141068+00:00 shinyapps[268124]: 17 
+2018-02-22T13:41:11.141071+00:00 shinyapps[268124]: Total ER charges in 2008 
+2018-02-22T13:41:11.141092+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.141104+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.141140+00:00 shinyapps[268124]: 185284.8 
+2018-02-22T13:41:11.141147+00:00 shinyapps[268124]: Total ER charges in 2008 
+2018-02-22T13:41:11.141148+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.148384+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.148385+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.148394+00:00 shinyapps[268124]: 18 
+2018-02-22T13:41:11.148394+00:00 shinyapps[268124]: pcap_er_charges_08 
+2018-02-22T13:41:11.148399+00:00 shinyapps[268124]: Pcap ER charges in 2008 
+2018-02-22T13:41:11.148409+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.148414+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.148466+00:00 shinyapps[268124]: 1393.118 
+2018-02-22T13:41:11.148477+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.148468+00:00 shinyapps[268124]: Pcap ER charges in 2008 
+2018-02-22T13:41:11.155755+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.155754+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.155764+00:00 shinyapps[268124]: 19 
+2018-02-22T13:41:11.155763+00:00 shinyapps[268124]: num_er_09 
+2018-02-22T13:41:11.155764+00:00 shinyapps[268124]: # of ER Patients in 2009 
+2018-02-22T13:41:11.155769+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.155783+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.155829+00:00 shinyapps[268124]: 129 
+2018-02-22T13:41:11.155839+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.155835+00:00 shinyapps[268124]: # of ER Patients in 2009 
+2018-02-22T13:41:11.162940+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.162941+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.162950+00:00 shinyapps[268124]: 20 
+2018-02-22T13:41:11.162950+00:00 shinyapps[268124]: er_charges_09 
+2018-02-22T13:41:11.162953+00:00 shinyapps[268124]: Total ER charges in 2009 
+2018-02-22T13:41:11.162966+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.162972+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.163023+00:00 shinyapps[268124]: 201409.5 
+2018-02-22T13:41:11.163033+00:00 shinyapps[268124]: Total ER charges in 2009 
+2018-02-22T13:41:11.163033+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.170873+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.170875+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.170885+00:00 shinyapps[268124]: 21 
+2018-02-22T13:41:11.170884+00:00 shinyapps[268124]: pcap_er_charges_09 
+2018-02-22T13:41:11.170885+00:00 shinyapps[268124]: Pcap ER charges in 2009 
+2018-02-22T13:41:11.170888+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.170894+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.170942+00:00 shinyapps[268124]: 1561.314 
+2018-02-22T13:41:11.170952+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.170948+00:00 shinyapps[268124]: Pcap ER charges in 2009 
+2018-02-22T13:41:11.178849+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.178848+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.178858+00:00 shinyapps[268124]: 22 
+2018-02-22T13:41:11.178858+00:00 shinyapps[268124]: num_er_10 
+2018-02-22T13:41:11.178874+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.178865+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.178861+00:00 shinyapps[268124]: # of ER Patients in 2010 
+2018-02-22T13:41:11.178925+00:00 shinyapps[268124]: 97 
+2018-02-22T13:41:11.178933+00:00 shinyapps[268124]: # of ER Patients in 2010 
+2018-02-22T13:41:11.186478+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.186476+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.178963+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.186552+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.186551+00:00 shinyapps[268124]: Total ER charges in 2010 
+2018-02-22T13:41:11.186489+00:00 shinyapps[268124]: 23 
+2018-02-22T13:41:11.186488+00:00 shinyapps[268124]: er_charges_10 
+2018-02-22T13:41:11.186499+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.186493+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.186490+00:00 shinyapps[268124]: Total ER charges in 2010 
+2018-02-22T13:41:11.186545+00:00 shinyapps[268124]: 142945.4 
+2018-02-22T13:41:11.194837+00:00 shinyapps[268124]: 24 
+2018-02-22T13:41:11.194837+00:00 shinyapps[268124]: pcap_er_charges_10 
+2018-02-22T13:41:11.194828+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.194826+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.194847+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.194841+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.194838+00:00 shinyapps[268124]: Pcap ER charges in 2010 
+2018-02-22T13:41:11.194898+00:00 shinyapps[268124]: 1473.664 
+2018-02-22T13:41:11.194905+00:00 shinyapps[268124]: Pcap ER charges in 2010 
+2018-02-22T13:41:11.194906+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.203253+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.203254+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.203261+00:00 shinyapps[268124]: tot_er_pats 
+2018-02-22T13:41:11.203261+00:00 shinyapps[268124]: 25 
+2018-02-22T13:41:11.203266+00:00 shinyapps[268124]: Cumulated # of ER partients 
+2018-02-22T13:41:11.203274+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.203285+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.203337+00:00 shinyapps[268124]: 359 
+2018-02-22T13:41:11.203344+00:00 shinyapps[268124]: Cumulated # of ER partients 
+2018-02-22T13:41:11.203345+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.212059+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.212060+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.212067+00:00 shinyapps[268124]: tot_er_charges 
+2018-02-22T13:41:11.212067+00:00 shinyapps[268124]: 26 
+2018-02-22T13:41:11.212071+00:00 shinyapps[268124]: Cumulated ER charges  
+2018-02-22T13:41:11.212089+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.212096+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.212138+00:00 shinyapps[268124]: 529639.6 
+2018-02-22T13:41:11.212149+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.212145+00:00 shinyapps[268124]: Cumulated ER charges  
+2018-02-22T13:41:11.221612+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.221613+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.221621+00:00 shinyapps[268124]: 27 
+2018-02-22T13:41:11.221620+00:00 shinyapps[268124]: pcap_er_charges_tot 
+2018-02-22T13:41:11.221624+00:00 shinyapps[268124]: Pcap cumulated ER charges  
+2018-02-22T13:41:11.221643+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.221633+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.221689+00:00 shinyapps[268124]: 1475.319 
+2018-02-22T13:41:11.221696+00:00 shinyapps[268124]: Pcap cumulated ER charges  
+2018-02-22T13:41:11.221697+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.231086+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.231087+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.231095+00:00 shinyapps[268124]: num_pat_08 
+2018-02-22T13:41:11.231096+00:00 shinyapps[268124]: 28 
+2018-02-22T13:41:11.231099+00:00 shinyapps[268124]: # of HC Patients in 2008 
+2018-02-22T13:41:11.231113+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.231104+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.231163+00:00 shinyapps[268124]: 386 
+2018-02-22T13:41:11.231171+00:00 shinyapps[268124]: # of HC Patients in 2008 
+2018-02-22T13:41:11.231171+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.240541+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.240540+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.240549+00:00 shinyapps[268124]: charges_08 
+2018-02-22T13:41:11.240550+00:00 shinyapps[268124]: 29 
+2018-02-22T13:41:11.240551+00:00 shinyapps[268124]: Total HC charges in 2008 
+2018-02-22T13:41:11.240554+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.240571+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.240614+00:00 shinyapps[268124]: 20072890 
+2018-02-22T13:41:11.240622+00:00 shinyapps[268124]: Total HC charges in 2008 
+2018-02-22T13:41:11.240622+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.255037+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.255036+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.255045+00:00 shinyapps[268124]: pcap_hc_charges_08 
+2018-02-22T13:41:11.255046+00:00 shinyapps[268124]: 30 
+2018-02-22T13:41:11.255049+00:00 shinyapps[268124]: Pcap HC charges in 2008 
+2018-02-22T13:41:11.255055+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.255069+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.255120+00:00 shinyapps[268124]: 52002.3 
+2018-02-22T13:41:11.255128+00:00 shinyapps[268124]: Pcap HC charges in 2008 
+2018-02-22T13:41:11.255132+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.265651+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.265650+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.265660+00:00 shinyapps[268124]: 31 
+2018-02-22T13:41:11.265659+00:00 shinyapps[268124]: num_pat_09 
+2018-02-22T13:41:11.265669+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.265663+00:00 shinyapps[268124]: # of HC Patients in 2009 
+2018-02-22T13:41:11.265675+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.265726+00:00 shinyapps[268124]: 385 
+2018-02-22T13:41:11.265733+00:00 shinyapps[268124]: # of HC Patients in 2009 
+2018-02-22T13:41:11.265736+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.276073+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.276072+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.276095+00:00 shinyapps[268124]: 32 
+2018-02-22T13:41:11.276094+00:00 shinyapps[268124]: charges_09 
+2018-02-22T13:41:11.276105+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.276104+00:00 shinyapps[268124]: Total HC charges in 2009 
+2018-02-22T13:41:11.276110+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.276165+00:00 shinyapps[268124]: 25541885 
+2018-02-22T13:41:11.276173+00:00 shinyapps[268124]: Total HC charges in 2009 
+2018-02-22T13:41:11.276174+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.287235+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.287233+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.287244+00:00 shinyapps[268124]: pcap_hc_charges_09 
+2018-02-22T13:41:11.287244+00:00 shinyapps[268124]: 33 
+2018-02-22T13:41:11.287245+00:00 shinyapps[268124]: Pcap HC charges in 2009 
+2018-02-22T13:41:11.287249+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.287254+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.287305+00:00 shinyapps[268124]: 66342.56 
+2018-02-22T13:41:11.287312+00:00 shinyapps[268124]: Pcap HC charges in 2009 
+2018-02-22T13:41:11.287316+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.298742+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.298743+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.298751+00:00 shinyapps[268124]: num_pat_10 
+2018-02-22T13:41:11.298789+00:00 shinyapps[268124]: # of HC Patients in 2010 
+2018-02-22T13:41:11.298824+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.298787+00:00 shinyapps[268124]: 34 
+2018-02-22T13:41:11.298843+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.298890+00:00 shinyapps[268124]: 317 
+2018-02-22T13:41:11.298897+00:00 shinyapps[268124]: # of HC Patients in 2010 
+2018-02-22T13:41:11.298898+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.309977+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.309978+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.309988+00:00 shinyapps[268124]: charges_10 
+2018-02-22T13:41:11.309988+00:00 shinyapps[268124]: 35 
+2018-02-22T13:41:11.310001+00:00 shinyapps[268124]: Total HC charges in 2010 
+2018-02-22T13:41:11.310009+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.310036+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.310114+00:00 shinyapps[268124]: 16309312 
+2018-02-22T13:41:11.310133+00:00 shinyapps[268124]: Total HC charges in 2010 
+2018-02-22T13:41:11.310135+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.321941+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.321942+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.321951+00:00 shinyapps[268124]: pcap_hc_charges_10 
+2018-02-22T13:41:11.321952+00:00 shinyapps[268124]: 36 
+2018-02-22T13:41:11.321955+00:00 shinyapps[268124]: Pcap HC charges in 2010 
+2018-02-22T13:41:11.321974+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.321987+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.322027+00:00 shinyapps[268124]: 51448.93 
+2018-02-22T13:41:11.322035+00:00 shinyapps[268124]: Pcap HC charges in 2010 
+2018-02-22T13:41:11.322038+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.333826+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.333827+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.333836+00:00 shinyapps[268124]: tot_pats 
+2018-02-22T13:41:11.333837+00:00 shinyapps[268124]: 37 
+2018-02-22T13:41:11.333837+00:00 shinyapps[268124]: Cumulated # of HC partients 
+2018-02-22T13:41:11.333841+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.333847+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.333898+00:00 shinyapps[268124]: 1088 
+2018-02-22T13:41:11.333906+00:00 shinyapps[268124]: Cumulated # of HC partients 
+2018-02-22T13:41:11.349916+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.349924+00:00 shinyapps[268124]: tot_charges 
+2018-02-22T13:41:11.333910+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.349925+00:00 shinyapps[268124]: 38 
+2018-02-22T13:41:11.349915+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.349926+00:00 shinyapps[268124]: Cumulated HC charges  
+2018-02-22T13:41:11.349934+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.349938+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.349992+00:00 shinyapps[268124]: 61924087 
+2018-02-22T13:41:11.350000+00:00 shinyapps[268124]: Cumulated HC charges  
+2018-02-22T13:41:11.350004+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.416433+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.416436+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.416437+00:00 shinyapps[268124]: pcap_hc_charges_tot 
+2018-02-22T13:41:11.416475+00:00 shinyapps[268124]: 39 
+2018-02-22T13:41:11.416477+00:00 shinyapps[268124]: Pcap cumulated HC charges  
+2018-02-22T13:41:11.416478+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.416479+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.416565+00:00 shinyapps[268124]: 56915.52 
+2018-02-22T13:41:11.416575+00:00 shinyapps[268124]: Pcap cumulated HC charges  
+2018-02-22T13:41:11.416577+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.429027+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.429029+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.429039+00:00 shinyapps[268124]: num_high_utils_08 
+2018-02-22T13:41:11.429040+00:00 shinyapps[268124]: 40 
+2018-02-22T13:41:11.429041+00:00 shinyapps[268124]: # of high utilizers (top 20%) in 2008 
+2018-02-22T13:41:11.429046+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.429052+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.429106+00:00 shinyapps[268124]: 106 
+2018-02-22T13:41:11.429113+00:00 shinyapps[268124]: # of high utilizers (top 20%) in 2008 
+2018-02-22T13:41:11.429114+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 
+2018-02-22T13:41:11.440515+00:00 shinyapps[268124]: ------------ 1.55c3 ------------ 
+2018-02-22T13:41:11.440516+00:00 shinyapps[268124]: ------------ 1.55d ------------ 
+2018-02-22T13:41:11.440524+00:00 shinyapps[268124]: num_high_utils_09 
+2018-02-22T13:41:11.440525+00:00 shinyapps[268124]: 41 
+2018-02-22T13:41:11.440525+00:00 shinyapps[268124]: # of high utilizers (top 20%) in 2009 
+2018-02-22T13:41:11.440545+00:00 shinyapps[268124]: ------------ 1.55c ------------ 
+2018-02-22T13:41:11.440528+00:00 shinyapps[268124]: ------------ 1.55a ------------ 
+2018-02-22T13:41:11.440602+00:00 shinyapps[268124]: 104 
+2018-02-22T13:41:11.440613+00:00 shinyapps[268124]: # of high utilizers (top 20%) in 2009 
+2018-02-22T13:41:11.440614+00:00 shinyapps[268124]: ------------ 1.55c2 ------------ 

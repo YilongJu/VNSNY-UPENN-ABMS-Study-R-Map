@@ -20,6 +20,8 @@ library(Hmisc)
 library(moments)
 library(colorspace)
 library(classInt)
+library(stringdist)
+library(ggplot2)
 library(dplyr)
 
 
@@ -57,13 +59,8 @@ GetBinforVar <- function(data, varName, nbins = 6) {
 }
 GetRadius <- function(varValue, l = 2, u = 32, cap = Inf) {
   if (cap != Inf) {
-    cat(varValue, '\n\n') 
-    cat(max(varValue, na.rm = T), '\n\n')
-    cat(varValue[which(varValue >= cap)], '\n\n') 
     varValue[which(varValue >= cap)] <- max(varValue[which(varValue < cap)],
                                             na.rm = T)
-    cat(varValue, '\n\n') 
-    cat(max(varValue, na.rm = T), '\n\n')
   }
   range <- range(varValue, na.rm = TRUE)
   varValue <- (varValue - range[1])/(range[2] - range[1]) * (u - l) + l
@@ -129,6 +126,24 @@ ny.map <- readOGR("data/ZillowNeighborhoods-NY/ZillowNeighborhoods-NY.shp")
 nypp <- readOGR("data/nypp_17c_police_precinct_shapefile/nypp.shp")
 
 NPIData <- read.csv("NPI_ctuniq.csv", row.names = 1)
+
+CMS_patient <- read.csv("data/CMS_patient.csv", row.names = 1)
+CMS_patient[CMS_patient == -100] <- NA
+CMS_patient <- CMS_patient %>% mutate(
+  pcap_er_charges_08 = er_charges_08 / num_er_08,
+  pcap_er_charges_09 = er_charges_09 / num_er_09,
+  pcap_er_charges_10 = er_charges_10 / num_er_10,
+  pcap_er_charges_tot = tot_er_charges / tot_er_pats,
+  pcap_hc_charges_08 = charges_08 / num_pat_08,
+  pcap_hc_charges_09 = charges_09 / num_pat_09,
+  pcap_hc_charges_10 = charges_10 / num_pat_10,
+  pcap_hc_charges_tot = tot_charges / tot_pats,
+  num_high_utils_08,
+  num_high_utils_09,
+  num_high_utils_10
+)
+CMS_patient <- CMS_patient[, c(1, 2, 3, 21, 4, 5, 22, 6, 7, 23, 8, 9, 24, 10, 11, 25, 12, 13, 26, 14, 15, 27, 16, 17, 28, 18, 19, 20)]
+data <- left_join(data, CMS_patient, by = c("ctuniq" = "CT2000_unique"))
 
 # pluto2007_ctuniq <- fread("data/pluto2007_ctuniq.csv")
 
@@ -289,11 +304,11 @@ watershedDF <- merge(watershedPoints, dataProjected@data, by = "id")
 # [Prepare useful data] ----
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # ==== Add new variable into CT layer:
-#       1) Add variable description in "Varialbe_Definitions.csv"
-#       2) Add a correspoding column to "data_vars", whose name should be   consistent with the varName in "Varialbe_Definitions.csv"
+#       1) Add variable description in "Varialbe_Definitions.csv" !!csv file!!
+#       2) Add a correspoding column to "data_vars", whose name should be consistent with the varName in "Varialbe_Definitions.csv"
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 data_ids <- data %>% dplyr::select(BoroCT2000, Name)
-data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap)
+data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap:num_high_utils_10)
 data_coords <- data[, c("ctrdlong", "ctrdlat")]
 data_necessary <- cbind(data_ids, data_vars, data_coords)
 # --- For CT
@@ -417,6 +432,64 @@ greenLeafIcon <- makeIcon(
 # dim(I1icon)
 # rsvg_png("data/icons/I1.svg", "data/icons/I1.png")
 
+
+# ---- For NPI data ----
+# NPI_majorOrganization <- NPIData %>% 
+#   group_by(organization_name.legal_business_name.) %>%
+#   summarise(count = n()) %>%
+#   arrange(desc(count))
+# NPI_majorOrganization <- NPI_majorOrganization[-1, ]
+# colnames(NPI_majorOrganization) <- c("organization", "count")
+# head(NPI_majorOrganization, 50)
+# 
+# 
+# organization_fullName_original <- as.character(NPI_majorOrganization$organization)
+# organization_fullName <- as.character(NPI_majorOrganization$organization)
+# 
+# nameNum <- length(organization_fullName)
+# ttt <- NPI_majorOrganization %>% filter(count >= 2)
+# nameNum <- nrow(ttt)
+# # nameNum <- 30
+# orgNameMatching <- sapply(organization_fullName[1:nameNum], function(x) {
+#   agrep(x, organization_fullName[1:nameNum], max.distance = 0.05, value=T)
+# })
+# orgNameMatchingLen <- sapply(orgNameMatching, length)
+# orgNameMatchingInfo <- data.frame(id = 1:length(orgNameMatchingLen), orgNameMatchingLen = orgNameMatchingLen)
+# orgNameMatchingInfo$orgName <- rownames(orgNameMatchingInfo)
+# rownames(orgNameMatchingInfo) <- orgNameMatchingInfo$id
+# orgNameMatchingInfo <- orgNameMatchingInfo %>% filter(orgNameMatchingLen > 1)
+# orgNameCombIdx <- orgNameMatchingInfo$id
+# orgNameMatchingMto1 <- orgNameMatching[orgNameCombIdx]
+# 
+# for (i in 1:length(orgNameMatchingMto1)) {
+#   for (j in orgNameMatchingMto1[[i]]) {
+#     organization_fullName[which(organization_fullName == j)] <- orgNameMatchingMto1[[i]][1]
+#   }
+# }
+# 
+# orgNameCompare <- data.frame(before = organization_fullName_original, after = organization_fullName)
+# head(orgNameCompare, 20)
+# 
+# write.csv(orgNameCompare, "data/orgNameCompare.csv")
+
+# --- --- Fuzzy name matching ----
+orgNameCompare <- read.csv("data/orgNameCompare.csv")
+NPI_organization <- NPIData %>% select(ctuniq, organization_name.legal_business_name., interpolated_latitude, interpolated_longitude)
+head(NPI_organization)
+colnames(NPI_organization) <- c("ctuniq", "organization", "lat", "long")
+organization_fullName_20 <- organization_fullName[1:20]
+head(NPI_organization)
+
+weillIdx <- which(NPI_organization$organization == "WEILL MEDICAL COLLEGE OF CORNELL UNIVERSITY")
+
+NPI_organization <- left_join(NPI_organization, orgNameCompare, by = c("organization" = "before"))
+NPI_organization$organization <- NPI_organization$after
+NPI_organization <- NPI_organization[, -ncol(NPI_organization)]
+
+# write.csv(orgNameCompare, "data/orgNameCompare.csv")
+# orgNameCompare <- read.csv("data/orgNameCompare.csv")
+# NPI_organization[weillIdx,]
+
 # [Load icons] ----
 buildingIcons <- iconList(
   I1 = GetIcon("I1"),
@@ -458,29 +531,15 @@ uniqueBuildingLabel <- as.character(uniqueBuildingLabel[, 1])
 
 pluto_bldCT_tmp <- pluto_bldCT %>% filter(bldgclass == "I3")
 
-# --- For NPI data
-head(NPIData)
-NPI_majorOrganization <- NPIData %>% 
-  group_by(organization_name.legal_business_name.) %>%
-  summarise(count = n()) %>%
-  arrange(desc(count))
-NPI_majorOrganization <- NPI_majorOrganization[-1, ]
-colnames(NPI_majorOrganization) <- c("organization", "count")
-head(NPI_majorOrganization, 20)
-dim(NPI_majorOrganization)
-organization_fullName <- NPI_majorOrganization$organization
-organization_fullName_20 <- NPI_majorOrganization$organization[1:20]
-organization_abbr <- c(
-  "NYU",
-  "Montefiore",
-  "MSSM",
-  "Weill Cornell"
-)
-organizationLabels <- list(
-  
-)
-NPI_tmp <- pluto_bldCT %>% filter(bldgclass == "I3")
 
+
+# [Necessary Datasets] ----
+# uCT
+# uNB
+# ct2000shp_attr
+# ny.map_attr
+# varDef
+# pluto_bldCT
 
 
 # [Test leaflet] ----
@@ -669,7 +728,7 @@ ui <- navbarPage(title = "VNSNY/UPENN ABMS Study",
       ),
       fluidRow(
         column(
-          leafletOutput(outputId = "outputMap", width = "99%", height = 1000),
+          leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
           width = 11,
           offset = 1
         )
@@ -740,7 +799,7 @@ server <- function(input, output, session) {
   #   Set range of radius of circles
   radiusRange_r <- reactive({
     if (input$ChooseShapefileID == "CT") {
-      return(c(1,12))
+      return(c(1,40))
     } else if (input$ChooseShapefileID == "NB") {
       return(c(2,32))
     }
@@ -817,6 +876,35 @@ server <- function(input, output, session) {
                    group = unlist(buildingLabels[buildingSymbol], use.names = FALSE)) %>%
         hideGroup(unlist(buildingLabels[buildingSymbol], use.names = FALSE))
     }
+    
+    cat("------------ 0.9 ------------")
+    
+    i <- 0
+    for (orgName in organization_fullName_20) {
+      i <- i + 1
+      NPI_organization_tmp <- NPI_organization %>%
+        filter(organization == orgName)
+      Lmap <- Lmap %>%
+        addCircles(data = NPI_organization_tmp,
+          lng = ~lat, lat = ~long,
+          weight = 20,
+          fill = T,
+          color = varColors[i],
+          stroke = T, fillOpacity = 0.6, opacity = 0.6,
+          group = orgName
+        ) %>%
+        addLegend(
+          colors = varColors[i],
+          labels = paste0("<b>", orgName, "</b>"),
+          opacity = 0.7,
+          title = NULL,
+          position = "bottomright",
+          group = orgName
+        ) %>%
+        hideGroup(orgName)
+    }
+    # NPI_organization
+    # organization_fullName_20
 
     cat("------------ 1 ------------")
     labelVars <- varNames
@@ -863,6 +951,7 @@ server <- function(input, output, session) {
   # Observe command from map control, hide / show layers
   observe({
     # Initialize map components
+    cat("------------ 1.51 ------------")
     map <- map_r()
     mapData <- map@data
     mapDataDisplayLabel <- mapDataDisplayLabel_r()
@@ -877,6 +966,11 @@ server <- function(input, output, session) {
     # tileVar <- "popdens"
     restVars <- varNames[varNames != tileVar]
     labelVars <- restVars
+    cat(tileVar, '\n')
+    cat(labelVars, '\n\n')
+    cat(varShortNames, '\n')
+    cat(colnames(mapData), '\n')
+    
     # labelVars <- varNames
     tileVarIdx <- checkboxGroupListIndex[[tileVar]]
     
@@ -889,23 +983,42 @@ server <- function(input, output, session) {
       labels <- sprintf("<strong>%s</strong><br/><b><u>%s:</u></b> %g<br/>",
                         mapDataDisplayLabel, varShortNames[tileVarIdx], signif(varValues, 4))
     }
+    cat("------------ 1.55 ------------", '\n')
     for (labelVar in labelVars) {
       # labelVar <- labelVars[1]
       labelVarIdx <- checkboxGroupListIndex[[labelVar]]
+      
+      cat(labelVar, '\n')
+      cat(labelVarIdx, '\n')
+      cat(varShortNames[labelVarIdx], '\n')
+      cat("------------ 1.55a ------------", '\n')
       if(showPercentage[labelVarIdx] == 1) {
+        cat("------------ 1.55b ------------", '\n')
         labels <- paste0(labels, "<b>", varShortNames[labelVarIdx], ":</b> ",
                          signif(100*mapData[, labelVar], 4), "%<br/>")
       } else {
+        cat("------------ 1.55c ------------", '\n')
+        cat(mapData[1, labelVar], '\n')
+        cat(varShortNames[labelVarIdx], '\n')
+        cat("------------ 1.55c2 ------------", '\n')
         labels <- paste0(labels, "<b>", varShortNames[labelVarIdx], ":</b> ",
                          signif(mapData[, labelVar], 4), "<br/>")
+        cat("------------ 1.55c3 ------------", '\n')
       }
+      cat("------------ 1.55d ------------", '\n')
     }
+    cat("------------ 1.6 ------------", '\n')
     if (CTNames) {
       labels <- paste0(labels, "<strong>CTs:</strong><br/>", mapData$NTANAme)
     }
-    cat("------------ 1.6 ------------")
     labels <- lapply(labels, HTML)
     colfunc <- colorRampPalette(c("white", varColors[tileVarIdx]))
+    
+    # Special treatment for offpcap
+    if (tileVar == 'offpcap') {
+      varValues[which(varValues > 0.7278)] <- max(varValues[which(varValues <= 0.7278)], na.rm = T)
+    }
+    cat("------------ 1.7 ------------")
     
     if (abs(skewness(as.numeric(as.character(varValues)), na.rm = T)) > 1 | tileVar == "subacc") {
       pal <- colorBin(colfunc(6), domain = varValues, n = 6)
@@ -958,7 +1071,8 @@ server <- function(input, output, session) {
       proxy <- proxy %>%
         addLayersControl(
           baseGroups = c("Grey map", "Standard map", "Dark map"),
-          overlayGroups = c(uniqueBuildingLabel,
+          overlayGroups = c(organization_fullName_20,
+                            uniqueBuildingLabel,
                             varShortNames),
           position = "topleft",
           options = layersControlOptions(autoZIndex = TRUE, collapsed = FALSE)
@@ -968,6 +1082,11 @@ server <- function(input, output, session) {
         proxy <- proxy %>%
           showGroup(groupName) %>%
           hideGroup(groupName)
+      }
+      for (orgName in organization_fullName_20) {
+        proxy <- proxy %>%
+          showGroup(orgName) %>%
+          hideGroup(orgName)
       }
       # proxy <- proxy %>%
       #   hide

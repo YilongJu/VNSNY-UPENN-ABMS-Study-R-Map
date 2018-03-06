@@ -17,5 +17,32 @@ ptrans,Working resid pub. trans.,1,Proportion of working residents who use publi
 pwalk,Working resid pub. walk,1,Proportion of working residents who walk to get to and from work (US Census)
 propoa,Resid over 65,1,Proportion of residents who are older adults (over 65). (US Census)
 propnonw,Resid nonwhite,1,Proportion of residents who are nonwhite (US Census). (More detailed indicators of neighborhood demographics are available - there are many different ways to look at neighborhood racial composition.)
-offpcap,Major offense pcap,0,major offense per capita
+offpcap,Crime data,0,major offense per capita
+num_er_08,# of ER Patients in 2008,0,Number of ER Patients in 2008
+er_charges_08,Total ER charges in 2008,0,Total ER charges in 2008
+pcap_er_charges_08,Pcap ER charges in 2008,0,Per capita ER charges in 2008
+num_er_09,# of ER Patients in 2009,0,Number of ER Patients in 2009
+er_charges_09,Total ER charges in 2009,0,Total ER charges in 2009
+pcap_er_charges_09,Pcap ER charges in 2009,0,Per capita ER charges in 2009
+num_er_10,# of ER Patients in 2010,0,Number of ER Patients in 2010
+er_charges_10,Total ER charges in 2010,0,Total ER charges in 2010
+pcap_er_charges_10,Pcap ER charges in 2010,0,Per capita ER charges in 2010
+tot_er_pats,Cumulated # of ER partients,0,Cumulated ER charges for all years
+tot_er_charges,Cumulated ER charges ,0,Cumulated Number of ER Patients for all years
+pcap_er_charges_tot,Pcap cumulated ER charges ,0,Per capita Cumulated ER charges for all years
+num_pat_08,# of HC Patients in 2008,0,NumbHC of HC Patients in 2008
+charges_08,Total HC charges in 2008,0,Total HC charges in 2008
+pcap_hc_charges_08,Pcap HC charges in 2008,0,PHC capita HC charges in 2008
+num_pat_09,# of HC Patients in 2009,0,NumbHC of HC Patients in 2009
+charges_09,Total HC charges in 2009,0,Total HC charges in 2009
+pcap_hc_charges_09,Pcap HC charges in 2009,0,PHC capita HC charges in 2009
+num_pat_10,# of HC Patients in 2010,0,NumbHC of HC Patients in 2010
+charges_10,Total HC charges in 2010,0,Total HC charges in 2010
+pcap_hc_charges_10,Pcap HC charges in 2010,0,PHC capita HC charges in 2010
+tot_pats,Cumulated # of HC partients,0,Cumulated HC charges for all years
+tot_charges,Cumulated HC charges ,0,Cumulated NumbHC of HC Patients for all years
+pcap_hc_charges_tot,Pcap cumulated HC charges ,0,PHC capita Cumulated HC charges for all years
+num_high_utils_08,# of high utilizers (top 20%) in 2008,0,Number of High Utilizers (top 20%) in 2008
+num_high_utils_09,# of high utilizers (top 20%) in 2009,0,Number of High Utilizers (top 20%) in 2009
+num_high_utils_10,# of high utilizers (top 20%) in 2010,0,Number of High Utilizers (top 20%) in 2010
 borocodenum,,0,"Borough code number, used to create the unique census tract identifiers described above. See above comment for code number crosswalk"
