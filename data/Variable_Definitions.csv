@@ -17,7 +17,7 @@ ptrans,Working resid pub. trans.,1,Proportion of working residents who use publi
 pwalk,Working resid pub. walk,1,Proportion of working residents who walk to get to and from work (US Census)
 propoa,Resid over 65,1,Proportion of residents who are older adults (over 65). (US Census)
 propnonw,Resid nonwhite,1,Proportion of residents who are nonwhite (US Census). (More detailed indicators of neighborhood demographics are available - there are many different ways to look at neighborhood racial composition.)
-offpcap,Crime data,0,major offense per capita
+offpcap,Pcap major offense,0,major offense per capita
 num_er_08,# of ER Patients in 2008,0,Number of ER Patients in 2008
 er_charges_08,Total ER charges in 2008,0,Total ER charges in 2008
 pcap_er_charges_08,Pcap ER charges in 2008,0,Per capita ER charges in 2008

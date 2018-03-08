@@ -110,13 +110,14 @@ GetIcon <- function(iconFilename, width = NULL, height = NULL, iconFileLoc = "da
 }
 # [Read data] ----
 # setwd("/Users/yilongju/Dropbox/Study/GitHub/VNSNY-UPENN-ABMS-Study-R-Map")
+debugMode <- F
 
 data <- read.csv("data/ABM_censustract_precinct_111617.csv")
 names(data)[2] <- "BoroCT2000"
 data <- data[order(data$BoroCT2000),]
 data <- data[-1973, ]
-data_precinct <- data %>% dplyr::select(precpop:offpcap)
-data_precinct2 <- data %>% dplyr::select(BoroCT2000, precpop:offpcap)
+# data_precinct <- data %>% dplyr::select(precpop:offpcap)
+# data_precinct2 <- data %>% dplyr::select(BoroCT2000, precpop:offpcap)
 
 varDef <- read.csv("data/Variable_Definitions.csv")
 
@@ -165,12 +166,10 @@ BOI <- c("I1", "I3", "I5", "I6", "I7", "K1", "K2", "K3", "K4", "K5", "K6", "P5",
 pluto_bldCT <- fread("data/pluto_bldCT.csv")
 #   Give id to each row
 pluto_bldCT$id <- rownames(pluto_bldCT)
-pluto_bldCT %>% arrange(ctuniq, bldgclass)
-head(pluto_bldCT, 20)
 
-pluto_bldCT_summary <- pluto_bldCT %>%
-  group_by(ctuniq, bldgclass) %>%
-  summarise(count = n())
+# pluto_bldCT_summary <- pluto_bldCT %>%
+#   group_by(ctuniq, bldgclass) %>%
+#   summarise(count = n())
 
 # [Create building varnames] ----
 buildingVarnames <- list(
@@ -192,50 +191,33 @@ buildingVarnames <- list(
 )
 
 # [Create PLUTO data columns for ABM data] ----
-head(pluto_bldCT_summary)
-pluto_bldCT_summary %>% arrange(ctuniq)
-bldCount <- data.frame(acast(pluto_bldCT_summary, ctuniq ~ bldgclass))
-bldCount[is.na(bldCount)] <- 0
+# bldCount <- data.frame(acast(pluto_bldCT_summary, ctuniq ~ bldgclass))
+# bldCount[is.na(bldCount)] <- 0
+# 
+# bldCount$K <- bldCount$K1 + bldCount$K2 + bldCount$K3 + bldCount$K4 + bldCount$K5 + bldCount$K6
+# colnames(bldCount) <- unlist(buildingVarnames[colnames(bldCount)], use.names = F)
+# bldCount$ctuniq <- rownames(bldCount)
+# rownames(bldCount) <- 1:nrow(bldCount)
+# 
+# ABM_PLUTO <- full_join(data, bldCount, by = "ctuniq")
+# write.csv(ABM_PLUTO, "ABM_PLUTO.csv")
 
-bldCount$K <- bldCount$K1 + bldCount$K2 + bldCount$K3 + bldCount$K4 + bldCount$K5 + bldCount$K6
-colnames(bldCount) <- unlist(buildingVarnames[colnames(bldCount)], use.names = F)
-bldCount$ctuniq <- rownames(bldCount)
-rownames(bldCount) <- 1:nrow(bldCount)
-head(bldCount)
-
-head(data)
-
-ABM_PLUTO <- full_join(data, bldCount, by = "ctuniq")
-head(ABM_PLUTO, 20)
-dim(data)
-dim(bldCount)
-dim(ABM_PLUTO)
-
-write.csv(ABM_PLUTO, "ABM_PLUTO.csv")
-
-
-
-pluto_bldCT[200:210, ]
-pluto_bldCT[is.na(pluto_bldCT$xcoord), ]
+if (debugMode) cat("*************** 1 ***************")
 #   Project coordinates of buildings into ny.map coordinate system
-pluto_bldCT_coords <- pluto_bldCT %>% dplyr::select(id, xcoord, ycoord)
-pluto_bldCT_coords <- pluto_bldCT_coords[complete.cases(pluto_bldCT_coords), ]
-head(pluto_bldCT_coords, 20)
-dim(pluto_bldCT_coords)
-coordinates(pluto_bldCT_coords) <- ~xcoord + ycoord
-proj4string(pluto_bldCT_coords) <- ct2000shp@proj4string
-pluto_bldCT_coords <- spTransform(pluto_bldCT_coords, ny.map@proj4string)
-head(pluto_bldCT_coords@coords)
-pluto_bldCT_coords <- data.frame(id = pluto_bldCT_coords$id,
-                                 x = pluto_bldCT_coords@coords[, 1],
-                                 y = pluto_bldCT_coords@coords[, 2])
-head(pluto_bldCT_coords)
-pluto_bldCT <- left_join(pluto_bldCT, pluto_bldCT_coords, by = "id") %>% dplyr::select(-xcoord, -ycoord)
-head(pluto_bldCT, 20)
+# pluto_bldCT_coords <- pluto_bldCT %>% dplyr::select(id, xcoord, ycoord)
+# pluto_bldCT_coords <- pluto_bldCT_coords[complete.cases(pluto_bldCT_coords), ]
+# coordinates(pluto_bldCT_coords) <- ~xcoord + ycoord
+# proj4string(pluto_bldCT_coords) <- ct2000shp@proj4string
+# pluto_bldCT_coords <- spTransform(pluto_bldCT_coords, ny.map@proj4string)
+# pluto_bldCT_coords <- data.frame(id = pluto_bldCT_coords$id,
+#                                  x = pluto_bldCT_coords@coords[, 1],
+#                                  y = pluto_bldCT_coords@coords[, 2])
+# pluto_bldCT <- left_join(pluto_bldCT, pluto_bldCT_coords, by = "id") %>% dplyr::select(-xcoord, -ycoord)
+# write.csv(pluto_bldCT[, -1], "data/pluto_bldCT.csv")
+pluto_bldCT <- read.csv("data/pluto_bldCT.csv")
 
 #   Project coordinates of other shape data
 ct2000shp <- spTransform(ct2000shp, ny.map@proj4string)
-head(ct2000shp@polygons[1])
 boros <- spTransform(boros, ny.map@proj4string)
 nypp <- spTransform(nypp, ny.map@proj4string)
 
@@ -260,9 +242,9 @@ varColors <- rainbow_hcl(length(varNames), c = 190, l = 60, start = 12, end = 30
 
 # [Prepare precinct shape data] ----
 nypp@data$id <- rownames(nypp@data)
-f_nypp <- fortify(nypp, polyname = "Precinct")
-nypp_DF <- merge(f_nypp, nypp@data, by = "id")
-
+# f_nypp <- fortify(nypp, polyname = "Precinct")
+# nypp_DF <- merge(f_nypp, nypp@data, by = "id")
+# if (debugMode) cat("*************** 2 ***************")
 # [Prepare Boros shape data] ----
 #   add to data a new column termed "id" composed of the rownames of data
 #   create a data.frame from our spatial object
@@ -270,36 +252,32 @@ nypp_DF <- merge(f_nypp, nypp@data, by = "id")
 #   aggregate to an upper level
 #   offset the label
 boros@data$id <- rownames(boros@data)
-f_boros <- fortify(boros, polyname = "BoroCode")
-boros_DF <- merge(f_boros, boros@data, by = "id")
-bnames <- aggregate(data = boros_DF, cbind(long,lat) ~ BoroName, FUN=function(x) mean(range(x)))
-# bnames[4,3] <- 200741.5
-bnames$BoroName <- as.character(bnames$BoroName)
-bnames$BoroName <- as.factor(bnames$BoroName)
 
 # [Prepare ct shape data] ----
 #   add to data a new column termed "id" composed of the rownames of data'
 #   create a data.frame from our spatial object
 #   merge the "fortified" data with the data from our spatial object
 ct2000shp@data$id <- rownames(ct2000shp@data)
-f_ct2000shp <- fortify(ct2000shp, polyname = "BoroCT2000")
-ct2000shp_DF <- merge(f_ct2000shp, ct2000shp@data, by = "id")
+# f_ct2000shp <- fortify(ct2000shp, polyname = "BoroCT2000")
+# ct2000shp_DF <- merge(f_ct2000shp, ct2000shp@data, by = "id")
 
 # [Prepare ny neighborhood shape data, <by Brooke>] ----
 #   project the dataframe onto the shape file
 #   add to data a new column termed "id" composed of the rownames of data
 #   create a data.frame from our spatial object
 #   merge the "fortified" data with the data from our spatial object
-sodo <- ny.map[ny.map$City == "New York", ]
-dat <- data.frame(Longitude = data$ctrdlong, Latitude = data$ctrdlat)
-coordinates(dat) <- ~ Longitude + Latitude
-proj4string(dat) <- proj4string(sodo)
-location = over(dat, sodo)
-data = cbind(data, location)
-dataProjected <- sodo
-dataProjected@data$id <- rownames(dataProjected@data)
-watershedPoints <- fortify(dataProjected, region = "id")
-watershedDF <- merge(watershedPoints, dataProjected@data, by = "id")
+# sodo <- ny.map[ny.map$City == "New York", ]
+# dat <- data.frame(Longitude = data$ctrdlong, Latitude = data$ctrdlat)
+# coordinates(dat) <- ~ Longitude + Latitude
+# proj4string(dat) <- proj4string(sodo)
+# location <- over(dat, sodo)
+# data <- cbind(data, location)
+# write.csv(data, "data/data.csv")
+data <- read.csv("data/data.csv")
+# dataProjected <- sodo
+# dataProjected@data$id <- rownames(dataProjected@data)
+# watershedPoints <- fortify(dataProjected, region = "id")
+# watershedDF <- merge(watershedPoints, dataProjected@data, by = "id")
 
 # [Prepare useful data] ----
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -312,87 +290,93 @@ data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap:num_high_utils_10)
 data_coords <- data[, c("ctrdlong", "ctrdlat")]
 data_necessary <- cbind(data_ids, data_vars, data_coords)
 # --- For CT
-uCT <- data_necessary %>%
-  group_by(BoroCT2000) %>%
-  summarise_all(funs(mean))
-ct2000shp_DF$BoroCT2000 <- as.character(ct2000shp_DF$BoroCT2000)
-uCT$BoroCT2000 <- as.character(uCT$BoroCT2000)
-dfCT <- dplyr::left_join(ct2000shp_DF, uCT, by = "BoroCT2000")
-#   --- Find center of view
-center_ct.map <- ct2000shp_DF %>%
-  dplyr::select(long, lat) %>%
-  summarise(ctrlong = mean(long), ctrlat = mean(lat))
-center_ct.map # -73.91271 40.69984
-#   --- Combine shapefile with data
+# uCT <- data_necessary %>%
+#   group_by(BoroCT2000) %>%
+#   summarise_all(funs(mean))
+# write.csv(uCT, "data/uCT.csv")
+uCT <- read.csv("data/uCT.csv")
+# ct2000shp_DF$BoroCT2000 <- as.character(ct2000shp_DF$BoroCT2000)
+# uCT$BoroCT2000 <- as.character(uCT$BoroCT2000)
+# dfCT <- dplyr::left_join(ct2000shp_DF, uCT, by = "BoroCT2000")
+# #   --- Find center of view
+# center_ct.map <- ct2000shp_DF %>%
+#   dplyr::select(long, lat) %>%
+#   summarise(ctrlong = mean(long), ctrlat = mean(lat))
+# center_ct.map # -73.91271 40.69984
+# #   --- Combine shapefile with data
 ct2000shp_attr <- ct2000shp
-ct2000shp_attr@data <- dplyr::left_join(ct2000shp_attr@data, uCT, by = "BoroCT2000")
-head(ct2000shp_attr@data)
+# ct2000shp_attr@data <- dplyr::left_join(ct2000shp_attr@data, uCT, by = "BoroCT2000")
+# write.csv(ct2000shp_attr@data, "data/ct2000shp_attr_data.csv")
+ct2000shp_attr@data <- read.csv("data/ct2000shp_attr_data.csv")
+
 
 # --- For NB
-uNB <- data_necessary %>%
-  group_by(Name) %>%
-  summarise_all(funs(mean))
-dfNB <- dplyr::left_join(watershedDF, uNB, by = "Name")
+# uNB <- data_necessary %>%
+#   group_by(Name) %>%
+#   summarise_all(funs(mean))
+
+# write.csv(uNB, "data/uNB.csv")
+uNB <- read.csv("data/uNB.csv")
 #   --- Find center of view
-center_ny.map <- watershedDF %>%
-  dplyr::select(long, lat) %>%
-  summarise(ctrlong = mean(long), ctrlat = mean(lat))
-center_ny.map # -73.92194 40.68922
+# center_ny.map <- watershedDF %>%
+#   dplyr::select(long, lat) %>%
+#   summarise(ctrlong = mean(long), ctrlat = mean(lat))
+# center_ny.map # -73.92194 40.68922
 #   --- Combine shapefile with data
 ny.map_attr <- ny.map
-ny.map_attr@data <- dplyr::left_join(ny.map_attr@data, uNB, by = "Name")
-
-data_necessary$BoroCT2000 <- as.character(data_necessary$BoroCT2000)
-NBname_CTntaname <- full_join(data_necessary, ct2000shp_DF, by = "BoroCT2000")
-NBname_CTntaname <- NBname_CTntaname %>%
-  distinct(Name, NTANAme) %>%
-  arrange(Name)
-NBname_CTntaname <- aggregate(NTANAme ~ Name, data = NBname_CTntaname,
-                              FUN = paste0, collapse = "<br/>")
-
-ny.map_attr@data <- left_join(ny.map_attr@data, NBname_CTntaname, by = "Name")
-
+# ny.map_attr@data <- dplyr::left_join(ny.map_attr@data, uNB, by = "Name")
+# 
+# data_necessary$BoroCT2000 <- as.character(data_necessary$BoroCT2000)
+# NBname_CTntaname <- full_join(data_necessary, ct2000shp_DF, by = "BoroCT2000")
+# NBname_CTntaname <- NBname_CTntaname %>%
+#   distinct(Name, NTANAme) %>%
+#   arrange(Name)
+# NBname_CTntaname <- aggregate(NTANAme ~ Name, data = NBname_CTntaname,
+#                               FUN = paste0, collapse = "<br/>")
+# 
+# ny.map_attr@data <- left_join(ny.map_attr@data, NBname_CTntaname, by = "Name")
+# write.csv(ny.map_attr@data, "data/ny_map_attr_data.csv")
+ny.map_attr@data <- read.csv("data/ny_map_attr_data.csv")
+if (debugMode) cat("*************** 3 ***************")
 # --- For Boro
-data_necessary_Boro <- cbind(data_necessary, borocodenum = data$borocodenum)
-tbl_df(data_necessary_Boro)
-data_necessary_Boro[is.na(data_necessary_Boro)] <- 0
-uBR <- data_necessary_Boro %>%
-  group_by(borocodenum) %>%
-  summarise_all(funs(mean))
-head(uBR)
-
-dfBR <- dplyr::left_join(boros_DF, uBR, by = c("BoroCode" = "borocodenum"))
-#   --- Combine shapefile with data
+# data_necessary_Boro <- cbind(data_necessary, borocodenum = data$borocodenum)
+# tbl_df(data_necessary_Boro)
+# data_necessary_Boro[is.na(data_necessary_Boro)] <- 0
+# uBR <- data_necessary_Boro %>%
+#   group_by(borocodenum) %>%
+#   summarise_all(funs(mean))
+# #   --- Combine shapefile with data
 boros_attr <- boros
-boros_attr@data <- dplyr::left_join(boros_attr@data, uBR, by = c("BoroCode" = "borocodenum"))
+# boros_attr@data <- dplyr::left_join(boros_attr@data, uBR, by = c("BoroCode" = "borocodenum"))
+
+# write.csv(boros_attr@data, "data/boros_attr_data.csv")
+boros_attr@data <- read.csv("data/boros_attr_data.csv")
 
 # --- For Precinct
-data_precinct[is.na(data_precinct)]
 
-uPP <- data_precinct %>%
-  group_by(precinct) %>%
-  summarise_all(funs(mean))
-head(uPP)
 
-dfPP <- dplyr::left_join(nypp_DF, uPP, by = c("Precinct" = "precinct"))
 #   --- Combine shapefile with data
 nypp_attr <- nypp
-nypp_attr@data <- dplyr::left_join(nypp_attr@data, uPP, by = c("Precinct" = "precinct"))
-
-CTname <- dfCT %>% dplyr::select(BoroCT2000, NTANAme)
-data_precinct2$BoroCT2000 <- as.character(data_precinct2$BoroCT2000)
-CTname$BoroCT2000 <- as.character(CTname$BoroCT2000)
-Precinct_CTntaname <- full_join(data_precinct2, CTname, by = "BoroCT2000")
-
-Precinct_CTntaname <- Precinct_CTntaname %>%
-  distinct(precinct, NTANAme) %>%
-  arrange(precinct)
-head(Precinct_CTntaname, 20)
-Precinct_CTntaname_aggr <- aggregate(NTANAme ~ precinct, data = Precinct_CTntaname,
-                              FUN = paste0, collapse = "<br/>")
-head(Precinct_CTntaname_aggr, 20)
+# uPP <- data_precinct %>%
+#   group_by(precinct) %>%
+#   summarise_all(funs(mean))
+# nypp_attr@data <- dplyr::left_join(nypp_attr@data, uPP, by = c("Precinct" = "precinct"))
+# write.csv(dplyr::left_join(nypp_attr@data, uPP, by = c("Precinct" = "precinct")), "data/nypp_attr_data.csv")
+nypp_attr@data <- read.csv("data/nypp_attr_data.csv")
+# CTname <- dfCT %>% dplyr::select(BoroCT2000, NTANAme)
+# data_precinct2$BoroCT2000 <- as.character(data_precinct2$BoroCT2000)
+# CTname$BoroCT2000 <- as.character(CTname$BoroCT2000)
+# Precinct_CTntaname <- full_join(data_precinct2, CTname, by = "BoroCT2000")
+# 
+# Precinct_CTntaname <- Precinct_CTntaname %>%
+#   distinct(precinct, NTANAme) %>%
+#   arrange(precinct)
+# write.csv(Precinct_CTntaname, "data/Precinct_CTntaname.csv")
+Precinct_CTntaname <- read.csv("data/Precinct_CTntaname.csv")
+Precinct_CTntaname_aggr <- aggregate(NTANAme ~ precinct, data = Precinct_CTntaname, FUN = paste0, collapse = "<br/>")
 nypp_attr@data <- left_join(nypp_attr@data, Precinct_CTntaname_aggr,
                             by = c("Precinct" = "precinct"))
+
 
 #   --- Prepare precinct data for plot
 precinct_varValues <- nypp_attr$offpcap
@@ -417,16 +401,6 @@ precinct_pal <- GetColorPalByBins(precinct_varValues, intervals, "red")
 precinct_groupName <- "Percapita offense"
 boro_groupName <- "Boros"
 
-# --- For PLUTO data
-greenLeafIcon <- makeIcon(
-  iconUrl = "http://leafletjs.com/examples/custom-icons/leaf-green.png",
-  iconWidth = 38, iconHeight = 95,
-  iconAnchorX = 22, iconAnchorY = 94,
-  shadowUrl = "http://leafletjs.com/examples/custom-icons/leaf-shadow.png",
-  shadowWidth = 50, shadowHeight = 64,
-  shadowAnchorX = 4, shadowAnchorY = 62
-)
-
 # For all kinds of buildings, refer to https://stackoverflow.com/questions/46286599/custom-markers-on-shiny-leaflet-map
 # I1icon <- rsvg("data/icons/I1.svg")
 # dim(I1icon)
@@ -434,7 +408,7 @@ greenLeafIcon <- makeIcon(
 
 
 # ---- For NPI data ----
-# NPI_majorOrganization <- NPIData %>% 
+# NPI_majorOrganization <- NPIData %>%
 #   group_by(organization_name.legal_business_name.) %>%
 #   summarise(count = n()) %>%
 #   arrange(desc(count))
@@ -445,6 +419,8 @@ greenLeafIcon <- makeIcon(
 # 
 # organization_fullName_original <- as.character(NPI_majorOrganization$organization)
 # organization_fullName <- as.character(NPI_majorOrganization$organization)
+# write.csv(organization_fullName, "data/organization_fullName.csv")
+organization_fullName <- read.csv("data/organization_fullName.csv")
 # 
 # nameNum <- length(organization_fullName)
 # ttt <- NPI_majorOrganization %>% filter(count >= 2)
@@ -473,21 +449,21 @@ greenLeafIcon <- makeIcon(
 # write.csv(orgNameCompare, "data/orgNameCompare.csv")
 
 # --- --- Fuzzy name matching ----
-orgNameCompare <- read.csv("data/orgNameCompare.csv")
-NPI_organization <- NPIData %>% select(ctuniq, organization_name.legal_business_name., interpolated_latitude, interpolated_longitude)
-head(NPI_organization)
-colnames(NPI_organization) <- c("ctuniq", "organization", "lat", "long")
-organization_fullName_20 <- organization_fullName[1:20]
-head(NPI_organization)
-
-weillIdx <- which(NPI_organization$organization == "WEILL MEDICAL COLLEGE OF CORNELL UNIVERSITY")
-
-NPI_organization <- left_join(NPI_organization, orgNameCompare, by = c("organization" = "before"))
-NPI_organization$organization <- NPI_organization$after
-NPI_organization <- NPI_organization[, -ncol(NPI_organization)]
-
-# write.csv(orgNameCompare, "data/orgNameCompare.csv")
 # orgNameCompare <- read.csv("data/orgNameCompare.csv")
+# NPI_organization <- NPIData %>% select(ctuniq, organization_name.legal_business_name., interpolated_latitude, interpolated_longitude)
+# head(NPI_organization)
+# colnames(NPI_organization) <- c("ctuniq", "organization", "lat", "long")
+organization_fullName_20 <- as.character(organization_fullName[1:20, 2])
+# head(NPI_organization)
+# 
+# weillIdx <- which(NPI_organization$organization == "WEILL MEDICAL COLLEGE OF CORNELL UNIVERSITY")
+# 
+# NPI_organization <- left_join(NPI_organization, orgNameCompare, by = c("organization" = "before"))
+# NPI_organization$organization <- NPI_organization$after
+# NPI_organization <- NPI_organization[, -ncol(NPI_organization)]
+# 
+# write.csv(NPI_organization, "data/NPI_organization.csv")
+NPI_organization <- read.csv("data/NPI_organization.csv")
 # NPI_organization[weillIdx,]
 
 # [Load icons] ----
@@ -757,7 +733,7 @@ ui <- navbarPage(title = "VNSNY/UPENN ABMS Study",
   )
 )
 
-cat("==================")
+if (debugMode) cat("==================")
 # [Define server logic] ----
 server <- function(input, output, session) {
   
@@ -877,7 +853,7 @@ server <- function(input, output, session) {
         hideGroup(unlist(buildingLabels[buildingSymbol], use.names = FALSE))
     }
     
-    cat("------------ 0.9 ------------")
+    if (debugMode) cat("------------ 0.9 ------------")
     
     i <- 0
     for (orgName in organization_fullName_20) {
@@ -906,7 +882,7 @@ server <- function(input, output, session) {
     # NPI_organization
     # organization_fullName_20
 
-    cat("------------ 1 ------------")
+    if (debugMode) cat("------------ 1 ------------")
     labelVars <- varNames
     # Add all other variables to be shown as circles
     if (length(labelVars) > 0) {
@@ -947,11 +923,11 @@ server <- function(input, output, session) {
     }
     Lmap
   })
-  cat("------------ 1.5 ------------")
+  if (debugMode) cat("------------ 1.5 ------------")
   # Observe command from map control, hide / show layers
   observe({
     # Initialize map components
-    cat("------------ 1.51 ------------")
+    if (debugMode) cat("------------ 1.51 ------------")
     map <- map_r()
     mapData <- map@data
     mapDataDisplayLabel <- mapDataDisplayLabel_r()
@@ -966,10 +942,10 @@ server <- function(input, output, session) {
     # tileVar <- "popdens"
     restVars <- varNames[varNames != tileVar]
     labelVars <- restVars
-    cat(tileVar, '\n')
-    cat(labelVars, '\n\n')
-    cat(varShortNames, '\n')
-    cat(colnames(mapData), '\n')
+    if (debugMode) cat(tileVar, '\n')
+    if (debugMode) cat(labelVars, '\n\n')
+    if (debugMode) cat(varShortNames, '\n')
+    if (debugMode) cat(colnames(mapData), '\n')
     
     # labelVars <- varNames
     tileVarIdx <- checkboxGroupListIndex[[tileVar]]
@@ -983,31 +959,31 @@ server <- function(input, output, session) {
       labels <- sprintf("<strong>%s</strong><br/><b><u>%s:</u></b> %g<br/>",
                         mapDataDisplayLabel, varShortNames[tileVarIdx], signif(varValues, 4))
     }
-    cat("------------ 1.55 ------------", '\n')
+    if (debugMode) cat("------------ 1.55 ------------", '\n')
     for (labelVar in labelVars) {
       # labelVar <- labelVars[1]
       labelVarIdx <- checkboxGroupListIndex[[labelVar]]
       
-      cat(labelVar, '\n')
-      cat(labelVarIdx, '\n')
-      cat(varShortNames[labelVarIdx], '\n')
-      cat("------------ 1.55a ------------", '\n')
+      if (debugMode) cat(labelVar, '\n')
+      if (debugMode) cat(labelVarIdx, '\n')
+      if (debugMode) cat(varShortNames[labelVarIdx], '\n')
+      if (debugMode) cat("------------ 1.55a ------------", '\n')
       if(showPercentage[labelVarIdx] == 1) {
-        cat("------------ 1.55b ------------", '\n')
+        if (debugMode) cat("------------ 1.55b ------------", '\n')
         labels <- paste0(labels, "<b>", varShortNames[labelVarIdx], ":</b> ",
                          signif(100*mapData[, labelVar], 4), "%<br/>")
       } else {
-        cat("------------ 1.55c ------------", '\n')
-        cat(mapData[1, labelVar], '\n')
-        cat(varShortNames[labelVarIdx], '\n')
-        cat("------------ 1.55c2 ------------", '\n')
+        if (debugMode) cat("------------ 1.55c ------------", '\n')
+        if (debugMode) cat(mapData[1, labelVar], '\n')
+        if (debugMode) cat(varShortNames[labelVarIdx], '\n')
+        if (debugMode) cat("------------ 1.55c2 ------------", '\n')
         labels <- paste0(labels, "<b>", varShortNames[labelVarIdx], ":</b> ",
                          signif(mapData[, labelVar], 4), "<br/>")
-        cat("------------ 1.55c3 ------------", '\n')
+        if (debugMode) cat("------------ 1.55c3 ------------", '\n')
       }
-      cat("------------ 1.55d ------------", '\n')
+      if (debugMode) cat("------------ 1.55d ------------", '\n')
     }
-    cat("------------ 1.6 ------------", '\n')
+    if (debugMode) cat("------------ 1.6 ------------", '\n')
     if (CTNames) {
       labels <- paste0(labels, "<strong>CTs:</strong><br/>", mapData$NTANAme)
     }
@@ -1018,7 +994,7 @@ server <- function(input, output, session) {
     if (tileVar == 'offpcap') {
       varValues[which(varValues > 0.7278)] <- max(varValues[which(varValues <= 0.7278)], na.rm = T)
     }
-    cat("------------ 1.7 ------------")
+    if (debugMode) cat("------------ 1.7 ------------")
     
     if (abs(skewness(as.numeric(as.character(varValues)), na.rm = T)) > 1 | tileVar == "subacc") {
       pal <- colorBin(colfunc(6), domain = varValues, n = 6)
@@ -1028,7 +1004,7 @@ server <- function(input, output, session) {
     
     # Create a proxy for Leaflet map, saving render time
     proxy <- leafletProxy("outputMap", data = map)
-    cat("------------ 2 ------------")
+    if (debugMode) cat("------------ 2 ------------")
     # Generate Leaflet map layers
     proxy <- proxy %>%
       clearGroup(group = "tileLayer") %>%
@@ -1046,15 +1022,17 @@ server <- function(input, output, session) {
           dashArray = "",
           fillOpacity = 0.7,
           bringToFront = T),
+        popup = labels,
+        popupOptions = popupOptions(autoClose = F),
         label = labels,
         labelOptions = labelOptions(
           style = list("font-weight" = "normal",
                        padding = "3px 8px"),
-          textsize = "15px",
+          textsize = "30px",
           direction = "auto"),
         # popup = tileVar,
         group = "tileLayer"
-      ) %>% 
+      ) %>%
       clearControls() %>%
       # Add corresponding legend
       addLegend(
@@ -1066,16 +1044,22 @@ server <- function(input, output, session) {
         group = paste0("T_", varShortNames[tileVarIdx])
       )
       
-    cat("------------ 3 ------------")
+    if (debugMode) cat("------------ 3 ------------")
       # Add map control
       proxy <- proxy %>%
         addLayersControl(
           baseGroups = c("Grey map", "Standard map", "Dark map"),
+          # overlayGroups = c("==== NPI Provider by Organizations ====",
+          #                   organization_fullName_20,
+          #                   "============== Buildings ==============",
+          #                   uniqueBuildingLabel,
+          #                   "============== Variables ==============",
+          #                   varShortNames),
           overlayGroups = c(organization_fullName_20,
                             uniqueBuildingLabel,
                             varShortNames),
           position = "topleft",
-          options = layersControlOptions(autoZIndex = TRUE, collapsed = FALSE)
+          options = layersControlOptions(autoZIndex = F, collapsed = F)
         )
       
       for (groupName in varShortNames) {
