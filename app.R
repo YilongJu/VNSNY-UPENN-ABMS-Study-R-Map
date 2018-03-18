@@ -671,61 +671,83 @@ ui <- navbarPage(title = "VNSNY/UPENN ABMS Study",
    tabPanel(
      title = "New ABM Census",
      div(class = "outer",
-         selectInput("ChooseTileVar",
-                     "Variable to show on the tile:",
-                     unlist(checkboxGroupList)),
+         
+         tags$head(
+           # Include our custom CSS
+           includeCSS("styles.css"),
+           includeScript("gomap.js")
+         ),
+         
          leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
-         absolutePanel(id = "controls", fixed = T, draggable = T, top = 600, left = "auto", right = 20, bottom = "auto", width = 330, height = "auto"),
-         h2("Update")
+         
+         absolutePanel(id = "controls", class = "panel panel-default", fixed = T, draggable = T, top = 60, left = "auto", right = 20, bottom = "auto", width = 330, height = "auto",
+         h2("Options"),
+         selectInput("ChooseTileVar",
+                     label = h4("Select which variable to show on the tile"),
+                     unlist(checkboxGroupList)),
+         radioButtons(inputId = "ChooseShapefileID",
+                      label = h4("Select which level of map to show"),
+                      choices = shapeDataList),
+         selectInput("ChooseLabelVars",
+                     label = h4("Select which variable definition to show"),
+                     unlist(checkboxGroupList)),
+         # checkboxGroupInput(inputId = "ChooseLabelVars",
+         #              label = h4("Check variable definitions"),
+         #              choices = checkboxGroupList,
+         #              inline = FALSE),
+         uiOutput("varDefOutput"),
+         verbatimTextOutput("displaySomething"),
+         verbatimTextOutput("displaySomething2"),
+         actionButton("clearDataPoints", "Clear")
+         )
      )
    ),
    
-  tabPanel(
-   title = "ABM Census",
-   h3("Select a variable to show on the tile and check others on the map. (Wait for about 10s for plotting.)"),
-    # Sidebar layout with input and output definitions
-    sidebarLayout(
-      fluidRow(
-        column(
-          radioButtons(inputId = "ChooseShapefileID",
-                      label = h4("Select which map to show"),
-                      choices = shapeDataList),
-          selectInput("ChooseTileVar",
-                      "Variable to show on the tile:",
-                      unlist(checkboxGroupList)),
-          verbatimTextOutput("displaySomething"),
-          # radioButtons(inputId = "ChooseTileVarID2",
-          #              label = h4("Select which variable to show on tile"),
-          #              choices = checkboxGroupList),
-          # actionButton("Plot", "Draw plot"),
-          
-          # fluidRow("Click the button to plot."),
-          width = 3,
-          offset = 1
-        ),
-        column(
-          checkboxGroupInput(inputId = "ChooseLabelVars",
-                       label = h4("Check variable definitions"),
-                       choices = checkboxGroupList,
-                       inline = FALSE),
-          width = 3
-        ),
-        column(
-          verbatimTextOutput("displaySomething2"),
-          uiOutput("varDefOutput"),
-          width = 5
-        )
-      ),
-      fluidRow(
-        column(
-          leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
-          width = 11,
-          offset = 1
-        )
-        
-      )
-    )
-  ),
+  # tabPanel(
+  #  title = "ABM Census",
+  #  h3("Select a variable to show on the tile and check others on the map. (Wait for about 10s for plotting.)"),
+  #   # Sidebar layout with input and output definitions
+  #   sidebarLayout(
+  #     fluidRow(
+  #       column(
+  #         radioButtons(inputId = "ChooseShapefileID",
+  #                     label = h4("Select which map to show"),
+  #                     choices = shapeDataList),
+  #         selectInput("ChooseTileVar",
+  #                     "Variable to show on the tile:",
+  #                     unlist(checkboxGroupList)),
+  #         verbatimTextOutput("displaySomething"),
+  #         # radioButtons(inputId = "ChooseTileVarID2",
+  #         #              label = h4("Select which variable to show on tile"),
+  #         #              choices = checkboxGroupList),
+  #         # actionButton("Plot", "Draw plot"),
+  #         
+  #         # fluidRow("Click the button to plot."),
+  #         width = 3,
+  #         offset = 1
+  #       ),
+  #       column(
+  #         checkboxGroupInput(inputId = "ChooseLabelVars",
+  #                      label = h4("Check variable definitions"),
+  #                      choices = checkboxGroupList,
+  #                      inline = FALSE),
+  #         width = 3
+  #       ),
+  #       column(
+  #         verbatimTextOutput("displaySomething2"),
+  #         uiOutput("varDefOutput"),
+  #         width = 5
+  #       )
+  #     ),
+  #     fluidRow(
+  #       column(
+  #         leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
+  #         width = 11,
+  #         offset = 1
+  #       )
+  #     )
+  #   )
+  # ),
 
   
   
@@ -810,18 +832,21 @@ server <- function(input, output, session) {
   })
   # Generate variable definitions
   varDefOutput_r <- reactive({
-    label <- "<h4>Variable Definitions</h4>"
+    # label <- "<h4>Variable Definitions</h4>"
+    label <- ""
     for (var in input$ChooseLabelVars) {
       varId <- checkboxGroupListIndex[[var]]
-      varSN <- varShortNames[varId]
+      # varSN <- varShortNames[varId]
       varD <- varDefinitions[varId]
-      label <- paste0(label, "<h5>", varSN, ":</h5>", varD, "<br/>")
+      # label <- paste0(label, "<h5>", varSN, ":</h5>", varD, "<br/>")
+      label <- paste0(label, varD, "<br/>")
     }
     HTML(label)
   })
   
   # create a reactive value that will store the click position
   dataClicked <- reactiveValues(clickedMarker = NULL)
+  areaClickedID <- reactiveValues(ID = NULL)
   
   # Show variable definitions
   output$varDefOutput <- renderUI({
@@ -1135,16 +1160,37 @@ server <- function(input, output, session) {
   # })
   
   # [Debugging] ----
-  observe({
+  observeEvent(input$outputMap_shape_click, {
     click <- input$outputMap_shape_click
-    print(click)
-    dataClicked$clickedMarker <- click$X
+    # print(click)
+    # dataClicked$clickedMarker <- click$X
+    # areaClickedID <- NULL
+    remove <- NULL
+    if (input$outputMap_shape_click$id %in% areaClickedID$ID) {
+      remove <- input$outputMap_shape_click$id
+      areaClickedID$ID <- areaClickedID$ID[!areaClickedID$ID %in% remove]
+      remove <- NULL
+      if (length(areaClickedID$ID) == 0) {
+        areaClickedID$ID <- NULL
+      }
+    } else {
+      areaClickedID$ID <- c(areaClickedID$ID, input$outputMap_shape_click$id)  
+    }
+    
+    print(areaClickedID$ID)
   })
   
   output$displaySomething <- renderPrint({
-    input$outputMap_shape_click
+    mapData <- map_r()@data
+    mapData[areaClickedID$ID, input$ChooseTileVar]
   })
-  # output$displaySomething2 <- renderPrint({})
+  output$displaySomething2 <- renderPrint({
+    areaClickedID$ID
+  })
+  
+  observeEvent(input$clearDataPoints, {
+    areaClickedID$ID <- NULL
+  })
 }
 # [Run server] ----
 shinyApp(ui = ui, server = server)
