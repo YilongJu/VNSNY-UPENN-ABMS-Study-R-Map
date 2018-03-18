@@ -666,6 +666,20 @@ if (0) {
 
 # [Define server ui] ----
 ui <- navbarPage(title = "VNSNY/UPENN ABMS Study",
+                 
+                 
+   tabPanel(
+     title = "New ABM Census",
+     div(class = "outer",
+         selectInput("ChooseTileVar",
+                     "Variable to show on the tile:",
+                     unlist(checkboxGroupList)),
+         leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
+         absolutePanel(id = "controls", fixed = T, draggable = T, top = 600, left = "auto", right = 20, bottom = "auto", width = 330, height = "auto"),
+         h2("Update")
+     )
+   ),
+   
   tabPanel(
    title = "ABM Census",
    h3("Select a variable to show on the tile and check others on the map. (Wait for about 10s for plotting.)"),
@@ -708,9 +722,15 @@ ui <- navbarPage(title = "VNSNY/UPENN ABMS Study",
           width = 11,
           offset = 1
         )
+        
       )
     )
   ),
+
+  
+  
+  
+  
   tabPanel("Reserved Slot", h3("This is the second panel"),
     # Sidebar layout with input and output definitions
     sidebarLayout(
@@ -799,6 +819,9 @@ server <- function(input, output, session) {
     }
     HTML(label)
   })
+  
+  # create a reactive value that will store the click position
+  dataClicked <- reactiveValues(clickedMarker = NULL)
   
   # Show variable definitions
   output$varDefOutput <- renderUI({
@@ -1023,15 +1046,22 @@ server <- function(input, output, session) {
           fillOpacity = 0.7,
           bringToFront = T),
         popup = labels,
-        popupOptions = popupOptions(autoClose = F),
+        popupOptions = popupOptions(
+          closeOnClick = T,
+          autoPan = T,
+          keepInView = F,
+          closeButton = T,
+          className = "POP"),
         label = labels,
         labelOptions = labelOptions(
           style = list("font-weight" = "normal",
                        padding = "3px 8px"),
-          textsize = "30px",
+          textsize = "25px",
           direction = "auto"),
         # popup = tileVar,
-        group = "tileLayer"
+        group = "tileLayer",
+        data = map,
+        layerId = ~X
       ) %>%
       clearControls() %>%
       # Add corresponding legend
@@ -1104,8 +1134,16 @@ server <- function(input, output, session) {
   #   # Make sure it closes when we exit this reactive, even if there's an error
   # })
   
-  # # For debugging
-  # output$displaySomething <- renderPrint({})
+  # [Debugging] ----
+  observe({
+    click <- input$outputMap_shape_click
+    print(click)
+    dataClicked$clickedMarker <- click$X
+  })
+  
+  output$displaySomething <- renderPrint({
+    input$outputMap_shape_click
+  })
   # output$displaySomething2 <- renderPrint({})
 }
 # [Run server] ----
