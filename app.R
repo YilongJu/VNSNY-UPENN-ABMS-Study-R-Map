@@ -3,6 +3,7 @@ library(rgdal)
 library(raster)
 library(data.table)
 library(shiny)
+library(shinyBS)
 # library(lazyeval)
 library(reshape2)
 library(scales)
@@ -665,115 +666,182 @@ if (0) {
 
 
 # [Define server ui] ----
-ui <- navbarPage(title = "VNSNY/UPENN ABMS Study",
-                 
-                 
-   tabPanel(
-     title = "New ABM Census",
-     div(class = "outer",
-         
-         tags$head(
-           # Include our custom CSS
-           includeCSS("styles.css"),
-           includeScript("gomap.js")
-         ),
-         
-         leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
-         
-         absolutePanel(id = "controls", class = "panel panel-default", fixed = T, draggable = T, top = 60, left = "auto", right = 20, bottom = "auto", width = 330, height = "auto",
-         h2("Options"),
-         selectInput("ChooseTileVar",
-                     label = h4("Select which variable to show on the tile"),
-                     unlist(checkboxGroupList)),
-         radioButtons(inputId = "ChooseShapefileID",
-                      label = h4("Select which level of map to show"),
-                      choices = shapeDataList),
-         selectInput("ChooseLabelVars",
-                     label = h4("Select which variable definition to show"),
-                     unlist(checkboxGroupList)),
-         # checkboxGroupInput(inputId = "ChooseLabelVars",
-         #              label = h4("Check variable definitions"),
-         #              choices = checkboxGroupList,
-         #              inline = FALSE),
-         uiOutput("varDefOutput"),
-         verbatimTextOutput("displaySomething"),
-         verbatimTextOutput("displaySomething2"),
-         actionButton("clearDataPoints", "Clear")
-         )
-     )
-   ),
-   
-  # tabPanel(
-  #  title = "ABM Census",
-  #  h3("Select a variable to show on the tile and check others on the map. (Wait for about 10s for plotting.)"),
-  #   # Sidebar layout with input and output definitions
-  #   sidebarLayout(
-  #     fluidRow(
-  #       column(
-  #         radioButtons(inputId = "ChooseShapefileID",
-  #                     label = h4("Select which map to show"),
-  #                     choices = shapeDataList),
-  #         selectInput("ChooseTileVar",
-  #                     "Variable to show on the tile:",
-  #                     unlist(checkboxGroupList)),
-  #         verbatimTextOutput("displaySomething"),
-  #         # radioButtons(inputId = "ChooseTileVarID2",
-  #         #              label = h4("Select which variable to show on tile"),
-  #         #              choices = checkboxGroupList),
-  #         # actionButton("Plot", "Draw plot"),
-  #         
-  #         # fluidRow("Click the button to plot."),
-  #         width = 3,
-  #         offset = 1
-  #       ),
-  #       column(
-  #         checkboxGroupInput(inputId = "ChooseLabelVars",
-  #                      label = h4("Check variable definitions"),
-  #                      choices = checkboxGroupList,
-  #                      inline = FALSE),
-  #         width = 3
-  #       ),
-  #       column(
-  #         verbatimTextOutput("displaySomething2"),
-  #         uiOutput("varDefOutput"),
-  #         width = 5
-  #       )
-  #     ),
-  #     fluidRow(
-  #       column(
-  #         leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
-  #         width = 11,
-  #         offset = 1
-  #       )
-  #     )
-  #   )
-  # ),
-
+ui <- bootstrapPage(
+  tags$head(
+    # Include our custom CSS
+    includeCSS("styles.css"),
+    includeScript("gomap.js")
+  ),
   
+  leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
   
-  
-  
-  tabPanel("Reserved Slot", h3("This is the second panel"),
-    # Sidebar layout with input and output definitions
-    sidebarLayout(
-      # Sidebar panel for inputs
-      sidebarPanel(
-      # Input: Slider for the number of bins
-      sliderInput(
-        inputId = "bins",
-        label = "Number of bins:",
-        min = 1,
-        max = 50,
-        value = 30)
-      ),
-      # Main panel for displaying outputs
-      mainPanel(
-        # Output: Histogram
-        plotOutput(outputId = "distPlot")
-      )
-    )
+  absolutePanel(
+    id = "controls", class = "panel panel-default", fixed = T, draggable = T, top = 60, left = "auto", right = 20, bottom = "auto", width = 330, height = "auto",
+    h2("Options"),
+    selectInput("ChooseTileVar",
+                label = h4("Select which variable to show on the tile"),
+                unlist(checkboxGroupList)),
+    radioButtons(inputId = "ChooseShapefileID",
+                 label = h4("Select which level of map to show"),
+                 choices = shapeDataList),
+    selectInput("ChooseLabelVars",
+                label = h4("Select which variable definition to show"),
+                unlist(checkboxGroupList),
+                multiple = T),
+    uiOutput("varDefOutput"),
+    # verbatimTextOutput("displaySomething"),
+    # verbatimTextOutput("displaySomething2"),
+    h4("Click a CT once to add it to the barplot, twice to remove"),
+    actionButton("clearDataPoints", "Clear all points"),
+    selectInput("ChooseCircleVars",
+                label = h4("Select which variable to show as circles (also in the barplot)"),
+                unlist(checkboxGroupList),
+                multiple = T),
+    plotOutput("varBarPlot", height = 200),
+    actionButton("viewDataPlot", "View plot in new window", class="btn-block")
+    # ,
+    # conditionalPanel("input.viewDataPlot % 2 == 1",
+    #    # Only prompt for threshold when coloring or sizing by superzip
+    #    verbatimTextOutput("displaySomething")
+    # )
+  ),
+  bsModal(id = "plotWindow",
+          title = "Plot of selected variables",
+          trigger = "viewDataPlot",
+          size = "large",
+          plotOutput("varBarPlotLarge"),
+          downloadButton(outputId = "download", label = "Download the plot"),
+          # verbatimTextOutput("varBarPlotLarge"),
+          tags$head(tags$style("#id1 .modal-footer{ display:none}"))
   )
 )
+
+# ui <- navbarPage(title = "VNSNY/UPENN ABMS Study", ----
+#                  
+#                  
+#    tabPanel(
+#      title = "New ABM Census",
+#      div(class = "outer",
+#          
+#          tags$head(
+#            # Include our custom CSS
+#            includeCSS("styles.css"),
+#            includeScript("gomap.js")
+#          ),
+#          
+#          leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
+#          
+#          absolutePanel(id = "controls", class = "panel panel-default", fixed = T, draggable = T, top = 60, left = "auto", right = 20, bottom = "auto", width = 330, height = "auto",
+#          h2("Options"),
+#          selectInput("ChooseTileVar",
+#                      label = h4("Select which variable to show on the tile"),
+#                      unlist(checkboxGroupList)),
+#          radioButtons(inputId = "ChooseShapefileID",
+#                       label = h4("Select which level of map to show"),
+#                       choices = shapeDataList),
+#          selectInput("ChooseLabelVars",
+#                      label = h4("Select which variable definition to show"),
+#                      unlist(checkboxGroupList)),
+#          # checkboxGroupInput(inputId = "ChooseLabelVars",
+#          #              label = h4("Check variable definitions"),
+#          #              choices = checkboxGroupList,
+#          #              inline = FALSE),
+#          uiOutput("varDefOutput"),
+#          verbatimTextOutput("displaySomething"),
+#          verbatimTextOutput("displaySomething2"),
+#          actionButton("clearDataPoints", "Clear"),
+#          
+#          plotOutput("varBarPlot", height = 200),
+#          actionButton("viewDataPlot", "View plot in new window", class="btn-block"),
+#          selectInput("ChooseCircleVars",
+#                      label = h4("Select which variable to show as circles"),
+#                      unlist(checkboxGroupList),
+#                      multiple = T)
+#          # ,
+#          # conditionalPanel("input.viewDataPlot % 2 == 1",
+#          #    # Only prompt for threshold when coloring or sizing by superzip
+#          #    verbatimTextOutput("displaySomething")
+#          # )
+#        )
+#        ,
+#        bsModal(id = "plotWindow",
+#                title = "Plot of selected variables",
+#                trigger = "viewDataPlot",
+#                size = "large",
+#                # plotOutput("varBarPlotLarge"),
+#                verbatimTextOutput("varBarPlotLarge"),
+#                tags$head(tags$style("#id1 .modal-footer{ display:none}"))
+#        )
+#      )
+#    ),
+#    
+#   # tabPanel(
+#   #  title = "ABM Census",
+#   #  h3("Select a variable to show on the tile and check others on the map. (Wait for about 10s for plotting.)"),
+#   #   # Sidebar layout with input and output definitions
+#   #   sidebarLayout(
+#   #     fluidRow(
+#   #       column(
+#   #         radioButtons(inputId = "ChooseShapefileID",
+#   #                     label = h4("Select which map to show"),
+#   #                     choices = shapeDataList),
+#   #         selectInput("ChooseTileVar",
+#   #                     "Variable to show on the tile:",
+#   #                     unlist(checkboxGroupList)),
+#   #         verbatimTextOutput("displaySomething"),
+#   #         # radioButtons(inputId = "ChooseTileVarID2",
+#   #         #              label = h4("Select which variable to show on tile"),
+#   #         #              choices = checkboxGroupList),
+#   #         # actionButton("Plot", "Draw plot"),
+#   #         
+#   #         # fluidRow("Click the button to plot."),
+#   #         width = 3,
+#   #         offset = 1
+#   #       ),
+#   #       column(
+#   #         checkboxGroupInput(inputId = "ChooseLabelVars",
+#   #                      label = h4("Check variable definitions"),
+#   #                      choices = checkboxGroupList,
+#   #                      inline = FALSE),
+#   #         width = 3
+#   #       ),
+#   #       column(
+#   #         verbatimTextOutput("displaySomething2"),
+#   #         uiOutput("varDefOutput"),
+#   #         width = 5
+#   #       )
+#   #     ),
+#   #     fluidRow(
+#   #       column(
+#   #         leafletOutput(outputId = "outputMap", width = "99%", height = 2000),
+#   #         width = 11,
+#   #         offset = 1
+#   #       )
+#   #     )
+#   #   )
+#   # ),
+#   
+#   # tabPanel("Reserved Slot", h3("This is the second panel"),
+#   #   # Sidebar layout with input and output definitions
+#   #   sidebarLayout(
+#   #     # Sidebar panel for inputs
+#   #     sidebarPanel(
+#   #     # Input: Slider for the number of bins
+#   #     sliderInput(
+#   #       inputId = "bins",
+#   #       label = "Number of bins:",
+#   #       min = 1,
+#   #       max = 50,
+#   #       value = 30)
+#   #     ),
+#   #     # Main panel for displaying outputs
+#   #     mainPanel(
+#   #       # Output: Histogram
+#   #       plotOutput(outputId = "distPlot")
+#   #     )
+#   #   )
+#   # )
+# )
 
 if (debugMode) cat("==================")
 # [Define server logic] ----
@@ -1110,9 +1178,11 @@ server <- function(input, output, session) {
           #                   uniqueBuildingLabel,
           #                   "============== Variables ==============",
           #                   varShortNames),
+          # overlayGroups = c(organization_fullName_20,
+          #                   uniqueBuildingLabel,
+          #                   varShortNames),
           overlayGroups = c(organization_fullName_20,
-                            uniqueBuildingLabel,
-                            varShortNames),
+                            uniqueBuildingLabel),
           position = "topleft",
           options = layersControlOptions(autoZIndex = F, collapsed = F)
         )
@@ -1158,6 +1228,11 @@ server <- function(input, output, session) {
   #   # Isolate the plot code, maintain the old plot until the button is clicked again
   #   # Make sure it closes when we exit this reactive, even if there's an error
   # })
+  # ---- Code for barplot
+  # dt <- data.frame(ID = c(1,2), var1 = c(30, 40), var2 = c(50, 60))
+  # dt_melt <- melt(dt, id = "ID")
+  # ggplot(dt_melt, aes(x =ID, y = value, fill = variable)) +
+  #   geom_bar(stat="identity", position = position_dodge())
   
   # [Debugging] ----
   observeEvent(input$outputMap_shape_click, {
@@ -1166,23 +1241,43 @@ server <- function(input, output, session) {
     # dataClicked$clickedMarker <- click$X
     # areaClickedID <- NULL
     remove <- NULL
-    if (input$outputMap_shape_click$id %in% areaClickedID$ID) {
-      remove <- input$outputMap_shape_click$id
-      areaClickedID$ID <- areaClickedID$ID[!areaClickedID$ID %in% remove]
-      remove <- NULL
-      if (length(areaClickedID$ID) == 0) {
-        areaClickedID$ID <- NULL
+    if (length(input$outputMap_shape_click$id) > 0) {
+      if (input$outputMap_shape_click$id %in% areaClickedID$ID) {
+        remove <- input$outputMap_shape_click$id
+        areaClickedID$ID <- areaClickedID$ID[!areaClickedID$ID %in% remove]
+        remove <- NULL
+        if (length(areaClickedID$ID) == 0) {
+          areaClickedID$ID <- NULL
+        }
+      } else {
+        areaClickedID$ID <- c(areaClickedID$ID, input$outputMap_shape_click$id)  
       }
-    } else {
-      areaClickedID$ID <- c(areaClickedID$ID, input$outputMap_shape_click$id)  
+      
+      print(areaClickedID$ID)
+    }
+
+  })
+  
+  observeEvent(input$ChooseCircleVars, {
+    # map <- map_r()@data
+    proxy <- leafletProxy("outputMap")
+    for (var in varNames) {
+      varIdx <- checkboxGroupListIndex[[var]]
+      proxy %>% hideGroup(varShortNames[varIdx])
     }
     
-    print(areaClickedID$ID)
+    for (var in input$ChooseCircleVars) {
+      varIdx <- checkboxGroupListIndex[[var]]
+      proxy %>% showGroup(varShortNames[varIdx])
+    }
   })
   
   output$displaySomething <- renderPrint({
     mapData <- map_r()@data
     mapData[areaClickedID$ID, input$ChooseTileVar]
+    # mapData[areaClickedID$ID, 1:5]
+    input$ChooseCircleVars
+    mapData[areaClickedID$ID, c("BoroCT2000", "NTANAme", input$ChooseTileVar, input$ChooseCircleVars)]
   })
   output$displaySomething2 <- renderPrint({
     areaClickedID$ID
@@ -1191,6 +1286,109 @@ server <- function(input, output, session) {
   observeEvent(input$clearDataPoints, {
     areaClickedID$ID <- NULL
   })
+  
+  output$varBarPlot <- renderPlot({
+    # If no zipcodes are in view, don't plot
+    if (length(areaClickedID$ID) == 0) {
+      return(NULL)
+    }
+    mapData <- map_r()@data
+    
+    data4Plot_origin <- mapData[areaClickedID$ID, c(input$ChooseTileVar, input$ChooseCircleVars)]
+    data4Plot_origin <- data.frame(ID = paste0("CT", mapData$BoroCT2000[areaClickedID$ID], ": " , mapData$NTANAme[areaClickedID$ID]), data4Plot_origin)
+    colnames(data4Plot_origin) <- c("ID", input$ChooseTileVar, input$ChooseCircleVars)
+    data4Plot_origin_melt <- melt(data4Plot_origin, id = "ID")
+    
+    for (j in c(input$ChooseTileVar, input$ChooseCircleVars)) {
+      values <- mapData[, j]
+      values <- values - min(values, na.rm = T)
+      values <- values / max(values, na.rm = T)
+      mapData[, j] <- values
+    }
+    
+    data4Plot <- mapData[areaClickedID$ID, c(input$ChooseTileVar, input$ChooseCircleVars)]
+    data4Plot <- data.frame(ID = paste0("CT", mapData$BoroCT2000[areaClickedID$ID], ": " , mapData$NTANAme[areaClickedID$ID]), data4Plot)
+    colnames(data4Plot) <- c("ID", input$ChooseTileVar, input$ChooseCircleVars)
+    print(data4Plot)
+    
+    data4Plot_melt <- melt(data4Plot, id = "ID")
+    data4Plot_melt <- data.frame(data4Plot_melt, value_origin = signif(data4Plot_origin_melt$value, 5))
+    print(data4Plot_melt)
+    
+    ggplot(data4Plot_melt, aes(x = ID, y = value, fill = variable)) +
+      geom_bar(stat = "identity", position = position_dodge()) +
+      geom_text(aes(label = value_origin),
+                position = position_dodge(width = 1),
+                # vjust = 1.6,
+                vjust = -0.3,
+                color = "black",
+                size = 3.5) +
+      theme_minimal() +
+      theme(axis.title.y = element_blank(),
+            axis.text.y = element_blank(),
+            axis.ticks.y = element_blank())
+  })
+  
+  largePlot_r <- reactiveValues(plot = NULL)
+  output$varBarPlotLarge <- renderPlot({
+    # If no zipcodes are in view, don't plot
+    if (length(areaClickedID$ID) == 0) {
+      return(NULL)
+    }
+
+    mapData <- map_r()@data
+    
+    data4Plot_origin <- mapData[areaClickedID$ID, c(input$ChooseTileVar, input$ChooseCircleVars)]
+    data4Plot_origin <- data.frame(ID = paste0("CT", mapData$BoroCT2000[areaClickedID$ID], ": " , mapData$NTANAme[areaClickedID$ID]), data4Plot_origin)
+    colnames(data4Plot_origin) <- c("ID", input$ChooseTileVar, input$ChooseCircleVars)
+    data4Plot_origin_melt <- melt(data4Plot_origin, id = "ID")
+    
+    for (j in c(input$ChooseTileVar, input$ChooseCircleVars)) {
+      values <- mapData[, j]
+      values <- values - min(values, na.rm = T)
+      values <- values / max(values, na.rm = T)
+      mapData[, j] <- values
+    }
+
+    data4Plot <- mapData[areaClickedID$ID, c(input$ChooseTileVar, input$ChooseCircleVars)]
+    data4Plot <- data.frame(ID = paste0("CT", mapData$BoroCT2000[areaClickedID$ID], ": " , mapData$NTANAme[areaClickedID$ID]), data4Plot)
+    colnames(data4Plot) <- c("ID", input$ChooseTileVar, input$ChooseCircleVars)
+    
+    data4Plot_melt <- melt(data4Plot, id = "ID")
+    data4Plot_melt <- data.frame(data4Plot_melt, value_origin = signif(data4Plot_origin_melt$value, 5))
+    
+    largePlot_r$plot <- ggplot(data4Plot_melt, aes(x = ID, y = value, fill = variable)) +
+      geom_bar(stat = "identity", position = position_dodge()) +
+      geom_text(aes(label = value_origin),
+                position = position_dodge(width = 1),
+                # vjust = 1.6,
+                vjust = -0.3,
+                color = "black",
+                size = 3.5) +
+      theme_minimal() +
+      theme(axis.title.y = element_blank(),
+            axis.text.y = element_blank(),
+            axis.ticks.y = element_blank())
+    largePlot_r$plot
+  })
+  
+  
+  # output$varBarPlotLarge <- renderPrint({
+  #   "XXXX"
+  # })
+  
+  # downloadHandler contains 2 arguments as functions, namely filename, content
+  output$download <- downloadHandler(
+    
+    filename = "new plot.png",
+    # content is a function with argument file. content writes the plot to the device
+    content = function(file) {
+      png(file) # open the png device
+      print(largePlot_r$plot)
+      dev.off()  # turn the device off
+    } 
+  )
+  
 }
 # [Run server] ----
 shinyApp(ui = ui, server = server)

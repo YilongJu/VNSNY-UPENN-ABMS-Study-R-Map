@@ -5,8 +5,8 @@ account: vnsnyupenn
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 268124
-bundleId: 1257161
+bundleId: 1275376
 url: https://vnsnyupenn.shinyapps.io/vnsny-upenn-abms-study-r-map/
-when: 1520438484.51254
+when: 1521416298.28296
 asMultiple: FALSE
 asStatic: FALSE
