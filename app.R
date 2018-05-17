@@ -113,14 +113,14 @@ GetIcon <- function(iconFilename, width = NULL, height = NULL, iconFileLoc = "da
 # setwd("/Users/yilongju/Dropbox/Study/GitHub/VNSNY-UPENN-ABMS-Study-R-Map")
 debugMode <- T
 
-data <- fread("data/ABM_censustract_precinct_111617.csv")
+data <- read.csv("data/ABM_censustract_precinct_111617.csv")
 names(data)[2] <- "BoroCT2000"
 data <- data[order(data$BoroCT2000),]
 data <- data[-1973, ]
 # data_precinct <- data %>% dplyr::select(precpop:offpcap)
 # data_precinct2 <- data %>% dplyr::select(BoroCT2000, precpop:offpcap)
 
-varDef <- fread("data/Variable_Definitions.csv")
+varDef <- read.csv("data/Variable_Definitions.csv")
 
 ct2000shp <- shapefile("data/nyct2000_12c/nyct2000_12c/nyct2000")
 boros <- readOGR("data/nybb_16a/nybb.shp")
@@ -129,10 +129,8 @@ nypp <- readOGR("data/nypp_17c_police_precinct_shapefile/nypp.shp")
 
 # NPIData <- read.csv("NPI_ctuniq.csv", row.names = 1)
 
-CMS_patient <- fread("data/CMS_patient_data2.csv")
-CMS_patient <- CMS_patient[, -1]
+CMS_patient <- read.csv("data/CMS_patient_data2.csv", row.names = 1)
 dim(CMS_patient)
-head(CMS_patient)
 sum(CMS_patient$num_patients == CMS_patient$num_pat_08, na.rm = T)
 CMS_patient[CMS_patient == -100] <- NA
 # CMS_patient <- CMS_patient %>% mutate(
@@ -158,13 +156,6 @@ CMS_patient <- CMS_patient %>% mutate(
 data <- left_join(data, CMS_patient, by = c("ctuniq" = "CT2000_unique"))
 head(data)
 
-
-chrono_conditions <- fread("data/chronic_conditons_by_CT.csv")
-chrono_conditions <- chrono_conditions[, -1]
-chrono_conditions <- chrono_conditions %>% dplyr::select(-numPatients)
-head(chrono_conditions)
-data <- left_join(data, chrono_conditions, by = c("ctuniq" = "CT2000_unique"))
-head(data)
 # dataName <- read.csv("data/data.csv")
 # head(dataName)
 # dataName <- dataName %>% select(ctuniq, Name)
@@ -313,7 +304,7 @@ ct2000shp@data$id <- rownames(ct2000shp@data)
 #       3) Apply the same change in "UpdateData.R" and run it.
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 data_ids <- data %>% dplyr::select(BoroCT2000, Name)
-data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap, avg_er_charges_tot:avgChronCond)
+data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap, avg_er_charges_tot:avg_charges_tot)
 data_coords <- data[, c("ctrdlong", "ctrdlat")]
 data_necessary <- cbind(data_ids, data_vars, data_coords)
 # --- For CT
@@ -1169,9 +1160,6 @@ server <- function(input, output, session) {
         if (debugMode) cat(mapData[1, labelVar], '\n')
         if (debugMode) cat(varShortNames[labelVarIdx], '\n')
         if (debugMode) cat("------------ 1.55c2 ------------", '\n')
-        print(labelVar)
-        print(labelVarIdx)
-        print(varShortNames[labelVarIdx])
         labels <- paste0(labels, "<b>", varShortNames[labelVarIdx], ":</b> ",
                          signif(mapData[, labelVar], 4), "<br/>")
         # avg_er_charges_08

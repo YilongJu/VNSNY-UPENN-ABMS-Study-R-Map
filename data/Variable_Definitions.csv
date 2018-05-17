@@ -20,5 +20,4 @@ propnonw,Resid nonwhite,1,Proportion of residents who are nonwhite (US Census). 
 offpcap,Pcap major offense,0,Major offense per capita
 avg_er_charges_tot,Avg ER charges ,0,Average Cumulated ER charges for all years
 avg_charges_tot,Avg HC charges ,0,Average Cumulated HC charges for all years
-avgChronCond,Avg Chronic Counts 08,0, chronic_count_08 averaged by the number of patients in a CT
 borocodenum,,0,"Borough code number, used to create the unique census tract identifiers described above. See above comment for code number crosswalk"

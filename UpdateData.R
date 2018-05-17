@@ -122,31 +122,34 @@ ny.map <- readOGR("data/ZillowNeighborhoods-NY/ZillowNeighborhoods-NY.shp")
 nypp <- readOGR("data/nypp_17c_police_precinct_shapefile/nypp.shp")
 
 # NPIData <- read.csv("NPI_ctuniq.csv", row.names = 1)
-data <- fread("data/ABM_censustract_precinct_111617.csv")
+data <- read.csv("data/ABM_censustract_precinct_111617.csv")
 names(data)[2] <- "BoroCT2000"
 data <- data[order(data$BoroCT2000),]
 data <- data[-1973, ]
+data_precinct <- data %>% dplyr::select(precpop:offpcap)
+data_precinct2 <- data %>% dplyr::select(BoroCT2000, precpop:offpcap)
 
-CMS_patient <- fread("data/CMS_patient_data2.csv")
-CMS_patient <- CMS_patient[, -1]
+
+CMS_patient <- read.csv("data/CMS_patient_data2.csv", row.names = 1)
 dim(CMS_patient)
-head(CMS_patient)
 sum(CMS_patient$num_patients == CMS_patient$num_pat_08, na.rm = T)
 CMS_patient[CMS_patient == -100] <- NA
-
 CMS_patient <- CMS_patient %>% mutate(
+  avg_er_charges_08 = er_charges_08 / num_er_08,
+  avg_er_charges_09 = er_charges_09 / num_er_09,
+  avg_er_charges_10 = er_charges_10 / num_er_10,
   avg_er_charges_tot = tot_er_charges / tot_er_visits,
-  avg_charges_tot = tot_charges / tot_visits
-) %>% dplyr::select(CT2000_unique, avg_er_charges_tot, avg_charges_tot)
-
+  avg_charges_08 = charges_08 / num_pat_08,
+  avg_charges_09 = charges_09 / num_pat_09,
+  avg_charges_10 = charges_10 / num_pat_10,
+  avg_charges_tot = tot_charges / tot_visits,
+  num_high_utils_08,
+  num_high_utils_09,
+  num_high_utils_10
+)
+CMS_patient <- CMS_patient[, c(1, 2, 3, 4, 22, 11, 12, 26, 19, 5, 6, 23, 13, 14, 27, 20, 7, 8, 24, 15, 16, 28, 21, 9, 10, 25, 17, 18, 29)]
+head(CMS_patient)
 data <- left_join(data, CMS_patient, by = c("ctuniq" = "CT2000_unique"))
-head(data)
-
-chrono_conditions <- fread("data/chronic_conditons_by_CT.csv")
-chrono_conditions <- chrono_conditions[, -1]
-chrono_conditions <- chrono_conditions %>% dplyr::select(-numPatients)
-head(chrono_conditions)
-data <- left_join(data, chrono_conditions, by = c("ctuniq" = "CT2000_unique"))
 head(data)
 
 # dataName <- read.csv("data/data.csv")
