@@ -310,6 +310,7 @@ ct2000shp@data$id <- rownames(ct2000shp@data)
 # ==== Add new variable into CT layer:
 #       1) Add variable description in "Varialbe_Definitions.csv" !!csv file!!
 #       2) Add a correspoding column to "data_vars", whose name should be consistent with the varName in "Varialbe_Definitions.csv"
+#       3) Apply the same change in "UpdateData.R" and run it.
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 data_ids <- data %>% dplyr::select(BoroCT2000, Name)
 data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap, avg_er_charges_tot:avgChronCond)
