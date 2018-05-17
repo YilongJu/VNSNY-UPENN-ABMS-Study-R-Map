@@ -111,7 +111,7 @@ GetIcon <- function(iconFilename, width = NULL, height = NULL, iconFileLoc = "da
 }
 # [Read data] ----
 # setwd("/Users/yilongju/Dropbox/Study/GitHub/VNSNY-UPENN-ABMS-Study-R-Map")
-debugMode <- T
+debugMode <- F
 
 data <- read.csv("data/ABM_censustract_precinct_111617.csv")
 names(data)[2] <- "BoroCT2000"
@@ -127,41 +127,25 @@ boros <- readOGR("data/nybb_16a/nybb.shp")
 ny.map <- readOGR("data/ZillowNeighborhoods-NY/ZillowNeighborhoods-NY.shp")
 nypp <- readOGR("data/nypp_17c_police_precinct_shapefile/nypp.shp")
 
-# NPIData <- read.csv("NPI_ctuniq.csv", row.names = 1)
+NPIData <- read.csv("NPI_ctuniq.csv", row.names = 1)
 
-CMS_patient <- read.csv("data/CMS_patient_data2.csv", row.names = 1)
-dim(CMS_patient)
-sum(CMS_patient$num_patients == CMS_patient$num_pat_08, na.rm = T)
+CMS_patient <- read.csv("data/CMS_patient.csv", row.names = 1)
 CMS_patient[CMS_patient == -100] <- NA
-# CMS_patient <- CMS_patient %>% mutate(
-#   avg_er_charges_08 = er_charges_08 / num_er_08,
-#   avg_er_charges_09 = er_charges_09 / num_er_09,
-#   avg_er_charges_10 = er_charges_10 / num_er_10,
-#   avg_er_charges_tot = tot_er_charges / tot_er_visits,
-#   avg_charges_08 = charges_08 / num_pat_08,
-#   avg_charges_09 = charges_09 / num_pat_09,
-#   avg_charges_10 = charges_10 / num_pat_10,
-#   avg_charges_tot = tot_charges / tot_visits,
-#   num_high_utils_08,
-#   num_high_utils_09,
-#   num_high_utils_10
-# )
 CMS_patient <- CMS_patient %>% mutate(
-  avg_er_charges_tot = tot_er_charges / tot_er_visits,
-  avg_charges_tot = tot_charges / tot_visits
-) %>% dplyr::select(CT2000_unique, avg_er_charges_tot, avg_charges_tot)
-# head(CMS_patient)
-# CMS_patient <- CMS_patient[, c(1, 2, 3, 4, 22, 11, 12, 26, 19, 5, 6, 23, 13, 14, 27, 20, 7, 8, 24, 15, 16, 28, 21, 9, 10, 25, 17, 18, 29)]
-# head(CMS_patient)
+  pcap_er_charges_08 = er_charges_08 / num_er_08,
+  pcap_er_charges_09 = er_charges_09 / num_er_09,
+  pcap_er_charges_10 = er_charges_10 / num_er_10,
+  pcap_er_charges_tot = tot_er_charges / tot_er_pats,
+  pcap_hc_charges_08 = charges_08 / num_pat_08,
+  pcap_hc_charges_09 = charges_09 / num_pat_09,
+  pcap_hc_charges_10 = charges_10 / num_pat_10,
+  pcap_hc_charges_tot = tot_charges / tot_pats,
+  num_high_utils_08,
+  num_high_utils_09,
+  num_high_utils_10
+)
+CMS_patient <- CMS_patient[, c(1, 2, 3, 21, 4, 5, 22, 6, 7, 23, 8, 9, 24, 10, 11, 25, 12, 13, 26, 14, 15, 27, 16, 17, 28, 18, 19, 20)]
 data <- left_join(data, CMS_patient, by = c("ctuniq" = "CT2000_unique"))
-head(data)
-
-# dataName <- read.csv("data/data.csv")
-# head(dataName)
-# dataName <- dataName %>% select(ctuniq, Name)
-# write.csv(dataName, "CTNames.csv")
-dataName <- read.csv("data/CTNames.csv")
-data <- left_join(data, dataName, by = "ctuniq")
 
 # pluto2007_ctuniq <- fread("data/pluto2007_ctuniq.csv")
 
@@ -290,7 +274,7 @@ ct2000shp@data$id <- rownames(ct2000shp@data)
 # location <- over(dat, sodo)
 # data <- cbind(data, location)
 # write.csv(data, "data/data.csv")
-# data <- read.csv("data/data.csv")
+data <- read.csv("data/data.csv")
 # dataProjected <- sodo
 # dataProjected@data$id <- rownames(dataProjected@data)
 # watershedPoints <- fortify(dataProjected, region = "id")
@@ -304,7 +288,7 @@ ct2000shp@data$id <- rownames(ct2000shp@data)
 #       3) Apply the same change in "UpdateData.R" and run it.
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 data_ids <- data %>% dplyr::select(BoroCT2000, Name)
-data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap, avg_er_charges_tot:avg_charges_tot)
+data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap:num_high_utils_10)
 data_coords <- data[, c("ctrdlong", "ctrdlat")]
 data_necessary <- cbind(data_ids, data_vars, data_coords)
 # --- For CT
@@ -438,7 +422,7 @@ boro_groupName <- "Boros"
 # organization_fullName_original <- as.character(NPI_majorOrganization$organization)
 # organization_fullName <- as.character(NPI_majorOrganization$organization)
 # write.csv(organization_fullName, "data/organization_fullName.csv")
-# organization_fullName <- read.csv("data/organization_fullName.csv")
+organization_fullName <- read.csv("data/organization_fullName.csv")
 # 
 # nameNum <- length(organization_fullName)
 # ttt <- NPI_majorOrganization %>% filter(count >= 2)
@@ -465,50 +449,23 @@ boro_groupName <- "Boros"
 # head(orgNameCompare, 20)
 # 
 # write.csv(orgNameCompare, "data/orgNameCompare.csv")
-# orgNameCompare <- read.csv("data/orgNameCompare.csv")
 
 # --- --- Fuzzy name matching ----
 # orgNameCompare <- read.csv("data/orgNameCompare.csv")
-
+# NPI_organization <- NPIData %>% select(ctuniq, organization_name.legal_business_name., interpolated_latitude, interpolated_longitude)
 # head(NPI_organization)
-# NPI_majorOrganization <- NPIData %>%
-#     group_by(organization_name.legal_business_name.) %>%
-#     summarise(count = n()) %>%
-#     arrange(desc(count))
-# head(NPI_majorOrganization, 20)
-# head(NPIData, 20)
-# NPIData %>% filter(organization_name.legal_business_name. == "NEW YORK UNIVERSITY")
-# NPIData$full_name <- paste(NPIData$first_name, NPIData$middle_name, NPIData$last_name.legal_name., sep = " ")
-# head(NPIData$full_name, 20)
-# NPI_organization <- NPIData %>% 
-#   dplyr::select(ctuniq, NPI, full_name, credential, street_addr = business_mailing_street, zip = business_mailing_zipcode, organization = organization_name.legal_business_name., lat = interpolated_latitude, long = interpolated_longitude)
+# colnames(NPI_organization) <- c("ctuniq", "organization", "lat", "long")
+organization_fullName_20 <- as.character(organization_fullName[1:20, 2])
 # head(NPI_organization)
-# NPI_organization %>% filter(organization == "NEW YORK UNIVERSITY")
 # 
-# organization_fullName_20 <- as.character(organization_fullName[1:20, 2])
-# # head(NPI_organization)
-# # 
-# # weillIdx <- which(NPI_organization$organization == "WEILL MEDICAL COLLEGE OF CORNELL UNIVERSITY")
-# # 
+# weillIdx <- which(NPI_organization$organization == "WEILL MEDICAL COLLEGE OF CORNELL UNIVERSITY")
+# 
 # NPI_organization <- left_join(NPI_organization, orgNameCompare, by = c("organization" = "before"))
-# NPI_organization %>% filter(organization == "NEW YORK UNIVERSITY")
-# head(NPI_organization, 20)
-# NPI_organization$organization <- as.character(NPI_organization$organization)
-# NPI_organization$after <- as.character(NPI_organization$after)
-# NPI_organization$organization[!is.na(NPI_organization$after)] <- NPI_organization$after[!is.na(NPI_organization$after)]
+# NPI_organization$organization <- NPI_organization$after
 # NPI_organization <- NPI_organization[, -ncol(NPI_organization)]
-# NPI_organization <- NPI_organization[, -ncol(NPI_organization)]
-# # 
+# 
 # write.csv(NPI_organization, "data/NPI_organization.csv")
 NPI_organization <- read.csv("data/NPI_organization.csv")
-NPI_majorOrganization <- NPI_organization %>%
-    group_by(organization) %>%
-    summarise(count = n()) %>%
-    arrange(desc(count))
-# head(NPI_majorOrganization)
-organization_fullName_20 <- as.character(NPI_majorOrganization$organization[2:21])
-# head(NPI_organization)
-
 # NPI_organization[weillIdx,]
 
 # [Load icons] ----
@@ -958,7 +915,7 @@ server <- function(input, output, session) {
   
   # create a reactive value that will store the click position
   dataClicked <- reactiveValues(clickedMarker = NULL)
-  areaClickedID <- reactiveValues(ID = NULL, lat = NULL, lng = NULL)
+  areaClickedID <- reactiveValues(ID = NULL)
   
   # Show variable definitions
   output$varDefOutput <- renderUI({
@@ -1020,35 +977,14 @@ server <- function(input, output, session) {
       i <- i + 1
       NPI_organization_tmp <- NPI_organization %>%
         filter(organization == orgName)
-      
-      # signif(varValues, 4)
-      labels <- sprintf("<b>NPI: </b>%d, <b>Name: </b>%s<br/>
-                        <b>Organization: </b>%s<br/>
-                        <b>CT: </b>%s<br/>
-                        <b>Credential: </b>%s<br/>
-                        <b>Address: </b>%s, zip: %s<br/>",
-                        NPI_organization_tmp$NPI, NPI_organization_tmp$full_name,
-                        NPI_organization_tmp$organization,
-                        NPI_organization_tmp$ctuniq,
-                        NPI_organization_tmp$credential,
-                        NPI_organization_tmp$street_addr, NPI_organization_tmp$zip)
-      
-      labels <- lapply(labels, HTML)
-      
       Lmap <- Lmap %>%
-        # addCircles(data = NPI_organization_tmp,
-        #   lng = ~lat, lat = ~long,
-        #   weight = 20,
-        #   fill = T,
-        #   popup = labels,
-        #   color = varColors[i],
-        #   stroke = T, fillOpacity = 0.6, opacity = 0.6,
-        #   group = orgName
-        # ) %>%
-        addMarkers(data = NPI_organization_tmp,
-                   lng = ~lat, lat = ~long,
-                   popup = labels,
-                   group = orgName
+        addCircles(data = NPI_organization_tmp,
+          lng = ~lat, lat = ~long,
+          weight = 20,
+          fill = T,
+          color = varColors[i],
+          stroke = T, fillOpacity = 0.6, opacity = 0.6,
+          group = orgName
         ) %>%
         addLegend(
           colors = varColors[i],
@@ -1141,8 +1077,6 @@ server <- function(input, output, session) {
                         mapDataDisplayLabel, varShortNames[tileVarIdx], signif(varValues, 4))
     }
     if (debugMode) cat("------------ 1.55 ------------", '\n')
-    if (debugMode) print(head(mapData))
-    
     for (labelVar in labelVars) {
       # labelVar <- labelVars[1]
       labelVarIdx <- checkboxGroupListIndex[[labelVar]]
@@ -1162,7 +1096,6 @@ server <- function(input, output, session) {
         if (debugMode) cat("------------ 1.55c2 ------------", '\n')
         labels <- paste0(labels, "<b>", varShortNames[labelVarIdx], ":</b> ",
                          signif(mapData[, labelVar], 4), "<br/>")
-        # avg_er_charges_08
         if (debugMode) cat("------------ 1.55c3 ------------", '\n')
       }
       if (debugMode) cat("------------ 1.55d ------------", '\n')
@@ -1171,7 +1104,6 @@ server <- function(input, output, session) {
     if (CTNames) {
       labels <- paste0(labels, "<strong>CTs:</strong><br/>", mapData$NTANAme)
     }
-    labels <- paste0(labels, "<br/><br/><br/>")
     labels <- lapply(labels, HTML)
     colfunc <- colorRampPalette(c("white", varColors[tileVarIdx]))
     
@@ -1305,68 +1237,26 @@ server <- function(input, output, session) {
   
   # [Debugging] ----
   observeEvent(input$outputMap_shape_click, {
-    event <- input$outputMap_shape_click
-    if (is.null(event)) {
-      return()
-    }
+    click <- input$outputMap_shape_click
+    # print(click)
+    # dataClicked$clickedMarker <- click$X
     # areaClickedID <- NULL
     remove <- NULL
-    if (event$id %in% areaClickedID$ID) {
-      remove <- event$id
-      areaClickedID$ID <- areaClickedID$ID[!areaClickedID$ID %in% remove]
-      areaClickedID$lat <- areaClickedID$lat[!areaClickedID$ID %in% remove]
-      areaClickedID$lng <- areaClickedID$lng[!areaClickedID$ID %in% remove]
-      remove <- NULL
-      if (length(areaClickedID$ID) == 0) {
-        areaClickedID$ID <- NULL
-        areaClickedID$lat <- NULL
-        areaClickedID$lng <- NULL
+    if (length(input$outputMap_shape_click$id) > 0) {
+      if (input$outputMap_shape_click$id %in% areaClickedID$ID) {
+        remove <- input$outputMap_shape_click$id
+        areaClickedID$ID <- areaClickedID$ID[!areaClickedID$ID %in% remove]
+        remove <- NULL
+        if (length(areaClickedID$ID) == 0) {
+          areaClickedID$ID <- NULL
+        }
+      } else {
+        areaClickedID$ID <- c(areaClickedID$ID, input$outputMap_shape_click$id)  
       }
-    } else {
-      areaClickedID$ID <- c(areaClickedID$ID, event$id)
-      areaClickedID$lat <- c(areaClickedID$lat, event$id)  
-      areaClickedID$lng <- c(areaClickedID$lng, event$id)  
+      
+      print(areaClickedID$ID)
     }
-    
-    print(areaClickedID$ID)
-    map <- map_r()
-    
-    data4Plot <- map@data[event$id, c(input$ChooseTileVar, input$ChooseCircleVars)]
-    data4Plot <- data.frame(ID = paste0("CT", map@data$BoroCT2000[event$id], ": " , map@data$NTANAme[event$id]), data4Plot)
-    colnames(data4Plot) <- c("ID", input$ChooseTileVar, input$ChooseCircleVars)
-    map@data <- data4Plot
-    
-    proxy <- leafletProxy("outputMap")
-    proxy %>%
-      addPopups(event$lng,
-                event$lat,
-                data4Plot$ID,
-                layerId = event$id)
-      # clearGroup(group = "highlightTileLayer") %>%
-      # # Add tile layer
-      # addPolygons(
-      #   fillColor = "white",
-      #   weight = 1,
-      #   opacity = 0.5,
-      #   color = "white",
-      #   dashArray = "3",
-      #   fillOpacity = 0.7,
-      #   highlight = highlightOptions(
-      #     weight = 3,
-      #     color = "#666",
-      #     dashArray = "",
-      #     fillOpacity = 0.7,
-      #     bringToFront = T),
-      #   label = ~ID,
-      #   labelOptions = labelOptions(
-      #     style = list("font-weight" = "normal",
-      #                  padding = "3px 8px"),
-      #     textsize = "25px",
-      #     direction = "auto"),
-      #   # popup = tileVar,
-      #   group = "highlightTileLayer",
-      #   data = map
-      # )
+
   })
   
   observeEvent(input$ChooseCircleVars, {
@@ -1426,16 +1316,6 @@ server <- function(input, output, session) {
     data4Plot_melt <- data.frame(data4Plot_melt, value_origin = signif(data4Plot_origin_melt$value, 5))
     print(data4Plot_melt)
     
-    tileVarIdx <- checkboxGroupListIndex[[input$ChooseTileVar]]
-    tileVarShortName <- varShortNames[tileVarIdx]
-    circleVarShortName <- c(NULL)
-    for (circleVar in input$ChooseCircleVars) {
-      circleVarIdx <- checkboxGroupListIndex[[circleVar]]
-      circleVarShortName <- c(circleVarShortName, varShortNames[circleVarIdx])
-    }
-    legendLabels <- c(tileVarShortName, circleVarShortName)
-    print(legendLabels)
-    
     ggplot(data4Plot_melt, aes(x = ID, y = value, fill = variable)) +
       geom_bar(stat = "identity", position = position_dodge()) +
       geom_text(aes(label = value_origin),
@@ -1444,19 +1324,13 @@ server <- function(input, output, session) {
                 vjust = -0.3,
                 color = "black",
                 size = 3.5) +
-      scale_fill_discrete(name = "Variables",
-                          breaks = c(input$ChooseTileVar, input$ChooseCircleVars),
-                          labels = legendLabels) +
       theme_minimal() +
-      theme(axis.text.x = element_text(angle = 45, hjust = 1),
-            axis.title.y = element_blank(),
+      theme(axis.title.y = element_blank(),
             axis.text.y = element_blank(),
             axis.ticks.y = element_blank())
   })
   
   largePlot_r <- reactiveValues(plot = NULL)
-  
-  
   output$varBarPlotLarge <- renderPlot({
     # If no zipcodes are in view, don't plot
     if (length(areaClickedID$ID) == 0) {
@@ -1484,16 +1358,6 @@ server <- function(input, output, session) {
     data4Plot_melt <- melt(data4Plot, id = "ID")
     data4Plot_melt <- data.frame(data4Plot_melt, value_origin = signif(data4Plot_origin_melt$value, 5))
     
-    tileVarIdx <- checkboxGroupListIndex[[input$ChooseTileVar]]
-    tileVarShortName <- varShortNames[tileVarIdx]
-    circleVarShortName <- c(NULL)
-    for (circleVar in input$ChooseCircleVars) {
-      circleVarIdx <- checkboxGroupListIndex[[circleVar]]
-      circleVarShortName <- c(circleVarShortName, varShortNames[circleVarIdx])
-    }
-    legendLabels <- c(tileVarShortName, circleVarShortName)
-    
-    
     largePlot_r$plot <- ggplot(data4Plot_melt, aes(x = ID, y = value, fill = variable)) +
       geom_bar(stat = "identity", position = position_dodge()) +
       geom_text(aes(label = value_origin),
@@ -1502,12 +1366,8 @@ server <- function(input, output, session) {
                 vjust = -0.3,
                 color = "black",
                 size = 3.5) +
-      scale_fill_discrete(name = "Variables",
-                          breaks = c(input$ChooseTileVar, input$ChooseCircleVars),
-                          labels = legendLabels) +
       theme_minimal() +
-      theme(axis.text.x = element_text(angle = 45, hjust = 1),
-            axis.title.y = element_blank(),
+      theme(axis.title.y = element_blank(),
             axis.text.y = element_blank(),
             axis.ticks.y = element_blank())
     largePlot_r$plot
