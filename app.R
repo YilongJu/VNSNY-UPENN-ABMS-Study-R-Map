@@ -1,5 +1,5 @@
 # [Load packages] ----
-library(rgdal)
+# library(rgdal)
 library(raster)
 library(data.table)
 library(shiny)
@@ -11,7 +11,6 @@ library(ggmap)
 library(Cairo)
 library(maptools)
 library(rgeos)
-library(scales)
 library(RColorBrewer)
 library(rsconnect)
 library(crosstalk)
@@ -110,7 +109,7 @@ GetIcon <- function(iconFilename, width = NULL, height = NULL, iconFileLoc = "da
     iconHeight = height))
 }
 # [Read data] ----
-# setwd("/Users/yilongju/Dropbox/Study/GitHub/VNSNY-UPENN-ABMS-Study-R-Map")
+setwd("/Users/yilongju/Dropbox/Study/GitHub/VNSNY-UPENN-ABMS-Study-R-Map")
 debugMode <- F
 
 data <- read.csv("data/ABM_censustract_precinct_111617.csv")
@@ -123,9 +122,10 @@ data <- data[-1973, ]
 varDef <- read.csv("data/Variable_Definitions.csv")
 
 ct2000shp <- shapefile("data/nyct2000_12c/nyct2000_12c/nyct2000")
-boros <- readOGR("data/nybb_16a/nybb.shp")
-ny.map <- readOGR("data/ZillowNeighborhoods-NY/ZillowNeighborhoods-NY.shp")
-nypp <- readOGR("data/nypp_17c_police_precinct_shapefile/nypp.shp")
+boros <- shapefile("data/nybb_16a/nybb.shp")
+ny.map <- shapefile("data/ZillowNeighborhoods-NY/ZillowNeighborhoods-NY.shp")
+ny.map@proj4string
+nypp <- shapefile("data/nypp_17c_police_precinct_shapefile/nypp.shp")
 
 NPIData <- read.csv("NPI_ctuniq.csv", row.names = 1)
 
@@ -1393,4 +1393,3 @@ server <- function(input, output, session) {
 }
 # [Run server] ----
 shinyApp(ui = ui, server = server)
-
