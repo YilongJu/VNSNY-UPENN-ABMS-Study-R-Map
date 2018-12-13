@@ -292,7 +292,7 @@ watershedDF <- merge(watershedPoints, dataProjected@data, by = "id")
 #       2) Add a correspoding column to "data_vars", whose name should be consistent with the varName in "Varialbe_Definitions.csv"
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 data_ids <- data %>% dplyr::select(BoroCT2000, Name)
-data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap, avg_er_charges_tot:avgChronCond)
+data_vars <- data %>% dplyr::select(popdens:propnonw, offpcap, num_er_08:avg_charges_tot)
 data_coords <- data[, c("ctrdlong", "ctrdlat")]
 data_necessary <- cbind(data_ids, data_vars, data_coords)
 # --- For CT
@@ -312,7 +312,6 @@ dfCT <- dplyr::left_join(ct2000shp_DF, uCT, by = "BoroCT2000")
 # #   --- Combine shapefile with data
 ct2000shp_attr <- ct2000shp
 ct2000shp_attr@data <- dplyr::left_join(ct2000shp_attr@data, uCT, by = "BoroCT2000")
-head(ct2000shp_attr@data)
 write.csv(ct2000shp_attr@data, "data/ct2000shp_attr_data.csv")
 # ct2000shp_attr@data <- read.csv("data/ct2000shp_attr_data.csv")
 
