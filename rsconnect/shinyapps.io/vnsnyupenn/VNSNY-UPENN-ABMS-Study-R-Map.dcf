@@ -1,0 +1,12 @@
+name: VNSNY-UPENN-ABMS-Study-R-Map
+title: VNSNY-UPENN-ABMS-Study-R-Map
+username:
+account: vnsnyupenn
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 268124
+bundleId: 1759877
+url: https://vnsnyupenn.shinyapps.io/vnsny-upenn-abms-study-r-map/
+when: 1544669504.69563
+asMultiple: FALSE
+asStatic: FALSE
