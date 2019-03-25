@@ -1,0 +1,24 @@
+﻿varName,varShortName,showPercentage,varFullDefinition
+ctuniq,,0,"Unique identifier for each census tract, concatenation of borough code (character) with census tract number (US Census 2000). We created this to avoid duplicate census tract numbers (census tracts are numbered within boroughs/counties)."
+boroCT2000,,0,Also a unique identifier for census tract; concatentation of borough code with census tract number (the only difference from 'ctuniq' is the borough code here is numeric).
+ctrdlong,,0,Longitude for geographic coordinates of census tract centroid
+ctrlat,,0,Latitude for geographic coordinates of census tract centroid
+popdens,Population density,0,Residents per square kilometer (based on 2000 Census)
+povrate,Poverty rate,1,Proportion at or below federal poverty line (2000 Census)
+unemp,Unemployment rate,1,Proportion of eligible workforce unemployed (2000 Census)
+busdens,Bus stop density,0,# of bus stops per square kilometer (from NYC MTA data)
+subdens,Subway stop density,0,# of subway stops/stations per square kilometer (from NYC MTA data)
+subacc,Subway access,0,Binary variable derived from 'subdens' indicating whether or not there is a subway station within the census tract (1=yes; 0=no)
+intdens,Intersection density,0,"# of intersections per square kilometer (derived from NYC Dept of City Planning Data, DCPLION)"
+landind,Land use index,0,"The mix of residential and commercial land use at tax lot level, aggregated to census tract level. Ranges from 0 to 1, where '0' indicates completely homogeneous (e.g. all tax lots in the census tract are either all residential or all commercial), and '1' indicates an even mix of commerical and residential. (Derived from NYC Dept of City Planning Data, PLUTO)"
+nonres,Tax lots for non-resid use,1,"Proportion of tax lots designated for nonresidential use: A different way of looking at land use mix, since the land use index ('landinx') proved difficult to interpret in statistical models. (Derived from NYC Dept of City Planning Data, PLUTO)"
+resid,Tax lots for resid use,1,"Proportion of tax lots designated for residential use: A different way of looking at land use mix, since the land use index ('landinx') proved difficult to interpret in statistical models. (Derived from NYC Dept of City Planning Data, PLUTO)"
+ptrans,Working resid pub. trans.,1,Proportion of working residents who use public transportation to get to and from work (US Census)
+pwalk,Working resid pub. walk,1,Proportion of working residents who walk to get to and from work (US Census)
+propoa,Resid over 65,1,Proportion of residents who are older adults (over 65). (US Census)
+propnonw,Resid nonwhite,1,Proportion of residents who are nonwhite (US Census). (More detailed indicators of neighborhood demographics are available - there are many different ways to look at neighborhood racial composition.)
+offpcap,Pcap major offense,0,Major offense per capita
+avg_er_charges_tot,Avg ER charges ,0,Average Cumulated ER charges for all years
+avg_charges_tot,Avg HC charges ,0,Average Cumulated HC charges for all years
+avgChronCond,Avg Chronic Counts 08,0, chronic_count_08 averaged by the number of patients in a CT
+borocodenum,,0,"Borough code number, used to create the unique census tract identifiers described above. See above comment for code number crosswalk"

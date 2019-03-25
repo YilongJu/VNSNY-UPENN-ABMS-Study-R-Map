@@ -510,15 +510,15 @@ uniqueBuildingLabel <- as.character(uniqueBuildingLabel[, 1])
 pluto_bldCT_tmp <- pluto_bldCT %>% filter(bldgclass == "I3")
 
 
-
-# [Necessary Datasets] ----
+# *********************************************
+# [[[[Necessary Datasets]]]] ----
 # uCT
 # uNB
 # ct2000shp_attr
 # ny.map_attr
 # varDef
 # pluto_bldCT
-
+# *********************************************
 
 # [Test leaflet] ----
 if (0) {

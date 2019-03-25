@@ -1,0 +1,36 @@
+# [Load packages] ----
+library(rgdal)
+library(raster)
+library(data.table)
+library(shiny)
+library(shinyBS)
+# library(lazyeval)
+library(reshape2)
+library(scales)
+library(ggmap)
+library(Cairo)
+library(maptools)
+library(rgeos)
+library(scales)
+library(RColorBrewer)
+library(rsconnect)
+library(crosstalk)
+library(leaflet)
+library(OneR)
+library(Hmisc)
+library(moments)
+library(colorspace)
+library(classInt)
+library(stringdist)
+library(ggplot2)
+library(dplyr)
+
+setwd("/Users/yilongju/Dropbox/Study/GitHub/VNSNY-UPENN-ABMS-Study-R-Map")
+debugMode <- F
+raw_data <- fread("data/ct2000shp_attr_data.csv")
+head(raw_data)
+
+# Select predictors and outcome
+raw_data_selected <- raw_data %>% dplyr::select(BoroCode, Shape_Leng, Shape_Area, popdens:offpcap, tot_charges)
+head(raw_data_selected)
+
